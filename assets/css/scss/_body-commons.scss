@@ -1,0 +1,315 @@
+/**
+ * --------------------------------------------------------------------------------
+ * Body Commons
+ * --------------------------------------------------------------------------------
+*/
+
+.news-marquee {
+	margin: 2.4rem 0;
+}
+
+.exclusive-news {
+	background-color: $red-color;
+	color: $white-color;
+	font-weight: 700;
+	width: 10%;
+	padding: .5rem 0;
+	float: left;
+
+	span {
+		display: block;
+		margin: 0 auto;
+		text-align: center;
+	}
+}
+
+.marquee {
+	background-color: #fff;
+	width: 90%;
+	padding: .5rem 0;
+	float: left;
+	overflow: hidden;
+
+	a {
+		color: $dark-color;
+		font-weight: 700;
+	}
+}
+
+.js-marquee {
+	a {
+		padding: 0 2.4rem;
+	}
+}
+
+.big-category-section {
+	width: 48%;
+	float: left;
+	margin-right: 2%;
+}
+
+.list-type-categories {
+	width: 50%;
+	float: left;
+}
+
+.left-content {
+    float: left;
+    width: 30%;
+}
+
+.right-contents {
+    float: left;
+    width: 68%;
+    margin-left: 2%;
+
+    h2 {
+    	font-size: 1.6rem !important;
+    	font-weight: 700;
+    	margin-bottom: 0;
+    	margin-top: 0 !important;
+    }
+
+    p {
+    	font-size: 1.3rem;
+    }
+}
+
+.list-item {
+	display: inline-block;
+	border-bottom: 0.1rem solid #efefef;
+	padding-bottom: .5rem;
+	margin-bottom: .5rem;
+
+	&:last-child {
+		border-bottom: none;
+		padding-bottom: 0rem;
+		margin-bottom: 0rem;
+	}
+}
+
+.section-two,
+.section-three,
+.section-four {
+	margin-top: 2.4rem;
+	padding-bottom: .5rem;
+
+	p {
+		margin-bottom: .5rem;
+	}
+}
+
+.section-two{
+	.post-info {
+		margin-bottom: .8rem;
+	}
+}
+
+.section-three {
+	.post-item {
+		float: left;
+		margin-right: 1%;
+	}
+
+	.big-category-section {
+		h2 {
+			margin-top: 1rem;
+		}
+	}
+
+	.post-item:last-child {
+		margin-right: 0;
+		margin-left: 1%;
+	}
+
+	h2 {
+		font-size: 2.2rem;
+		font-weight: 700;
+		margin-top: 1rem;
+		margin-bottom: .5rem;
+	}
+
+	.post-info {
+		font-size:1.4rem ;
+		line-height: 2.1rem;
+		margin-bottom:.8rem ;
+	}
+
+	.post-excerpt {
+	 	font-size:1.6rem ;
+		line-height: 2.1rem;
+		margin-bottom:1.6rem ;	
+	}
+	
+}
+
+.section-four{
+
+	padding-bottom:2.4rem ;
+
+	.title {
+		color: $white-color;
+		background-color: $dark-color;
+		font-weight: 700;
+		padding: .5rem 1rem;
+	}
+
+	hr {
+		border: 1px solid $dark-color;
+		margin-top: 0;
+	}
+
+	.post-info {
+		margin-bottom: .8rem;
+	}
+}
+
+.more-fancy-h {
+	h5 {
+		position: relative;
+		text-align: center;
+	}
+
+	a {
+		color:#fff;
+	}
+
+	.more-skew {
+		background: $red-color;
+		color: #fff;
+		font-weight: 700;
+		margin: 20px;
+		display: inline-block;
+		padding: 0 15px;
+		transform: skewX(-10deg);
+	}
+
+	h5:before {
+		content: "";
+		background: $red-color;
+		display: block;
+		height: 2px;
+		position: absolute;
+		top: 50%;
+		width: 100%;
+	}
+
+	h5:before {
+	  left: 0;
+	}
+}
+
+.section-five {
+
+	.big-cat-section {
+		h2 {
+		font-size: 2.0rem;
+		font-weight:700;
+		line-height:2.8rem ;
+		margin-bottom: .8rem;
+	  }
+
+	.post-info {
+		font-size:1.4rem ;
+		line-height: 2.1rem;
+		margin-bottom:.8rem ;
+	}
+
+	.post-excerpt {
+		
+		margin-bottom:0rem ;
+	}
+	
+	}	
+}
+
+.section-title-blue ,
+.section-title-red {
+	overflow: hidden;
+	margin-bottom: 1.6rem;
+
+	.title {
+		color: $white-color;
+		font-weight: 700;
+		padding: .5rem 1rem;
+	}
+}
+
+.section-title-blue {
+	border-bottom: .2rem solid $green-color;
+
+	.title {
+		background-color: $green-color;
+		font-weight: 900;
+	}
+}
+
+.section-title-red {
+	border-bottom: .2rem solid $red-color;
+
+	.title {
+		background-color: $red-color;
+		font-weight: 900;
+	}
+}
+
+.post-overlay {
+	height: 19.9rem;
+	margin-bottom: .2rem;
+	position: relative;
+	overflow: hidden;
+
+	h3 {
+		font-size: 1.8rem;
+		font-weight: 700;
+	}
+}
+
+.block {
+	.red {
+
+		div {
+			background-color: $red-color;
+			border-top-left-radius: 2px;
+			border-top-right-radius: 2px;
+		}
+
+		.slide-prev {
+			&:after {
+				content: '\f107';
+				color: $white-color;
+				font-weight: 700;
+			}
+		}
+
+		.slide-next {
+			&:after {
+				content: '\f106';
+				color: $white-color;
+				font-weight: 700;
+			}
+		}
+	}
+
+	.slide-nav {	
+		top: 2.4rem;
+		right: 2.4rem;
+
+		.slide-prev {
+		}
+
+		.slide-next {
+		}
+	}
+}
+
+.single-post-category {
+	display: inline-block;
+	margin-right: 2%;
+	width: 49%;
+	float: left;
+
+	&:last-child {
+		margin-right: 0;
+	}
+}
