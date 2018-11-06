@@ -1,70 +1,8 @@
 <?php get_header(); ?>
 <?php get_template_part( 'template-parts/home/section', 'news-marquee' ); ?>
+<?php get_template_part( 'template-parts/home/section', 'slider' ); ?>
 
-			<div class="container section-one slider">
-				<div class="row">
-					<div class="twelve columns">
-						<div class="x-large zoom">
 
-							<div class="slide-nav clearfix">
-								<div class="slide-prev"></div><!-- /.slide-prev -->
-								<div class="slide-next"></div><!-- /.slide-next -->
-							</div><!-- /.slide -->
-
-							<div class="slider-banner">
-								<div class="slide-banner">
-									<div class="overlay"></div><!-- /.overlay -->
-									<img src="img/blog-post.jpg" alt="ad banner" style="width: 100%; height: 100%;">
-									<div class="post-content">
-										<h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h3>
-									</div><!-- /.post-content -->
-								</div><!-- /.slide-banner -->
-
-								<div class="slide-banner">
-									<div class="overlay"></div><!-- /.overlay -->
-									<img src="img/banner-image.jpg" alt="ad banner" style="width: 100%; height: 100%;">
-									<div class="post-content">
-										<h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h3>
-									</div><!-- /.post-content -->
-								</div><!-- /.slide-banner -->
-
-								<div class="slide-banner">
-									<div class="overlay"></div><!-- /.ovrlay -->
-									<img src="img/blog-post.jpg" alt="ad banner" style="width: 100%; height: 100%;">
-									<div class="post-content">
-										<h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h3>
-									</div><!-- /.post-content -->
-								</div><!-- /.slide-banner -->
-
-							</div><!-- /.slider-banner -->
-						</div><!-- /.x-large -->
-						<div class="medium-post-section">
-							<div class="full-post zoom">
-								<div class="overlay"></div><!-- /.overlay -->
-								<img src="img/banner-image.jpg" alt="ad banner" style="width: 100%; height: 100%;">
-								<div class="post-content">
-									<h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h3>
-								</div><!-- /.post-content -->
-							</div><!-- /.full-post -->
-							<div class="small-post zoom">
-								<div class="overlay"></div><!-- /.overlay -->
-								<img src="img/banner-image.jpg" alt="ad banner" style="width: 100%; height: 100%;">
-								<div class="post-content">
-									<h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h3>
-								</div><!-- /.post-content -->
-							</div><!-- /.small-post -->
-							<div class="small-post zoom">
-								<div class="overlay"></div><!-- /.overlay -->
-								<img src="img/banner-image.jpg" alt="ad banner" class="post-background" style="width: 100%; height: 100%;">
-								<div class="post-content">
-									<h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h3>
-								</div><!-- /.post-content -->
-							</div><!-- /.small-post -->
-						</div><!-- /.medium-post-section -->
-					</div><!-- /.tweleve column -->
-				</div><!-- /.row -->
-			</div><!-- /.container /.slider -->
-			
 			<div class="container two">
 				<div class="row main-banner">
 					<div class="eight columns">
