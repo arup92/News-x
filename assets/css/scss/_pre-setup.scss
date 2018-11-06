@@ -287,21 +287,21 @@ nav a {
 .main-nav>li>a {
 	color: $dark-color;
 	display: block;
-	padding: 1.2rem 1.2rem;
+	padding: 2.4rem 1.6rem;
 }
 
 .white-header .main-nav>li>a {
-	color: $dark-color;
+	color: #1f1f1f;
 	display: block;
 	padding: 2.4rem 1.6rem;
 }
 
-.main-nav>.has-children>ul {
+.main-nav>.menu-item-has-children>ul {
 	background-color: #fff;
 	
 	position: absolute;
 	padding: 1.6rem 2.4rem;
-	width: 160px;
+	width: 150px;
 	
 	opacity: 0;
 	visibility: hidden;
@@ -322,7 +322,7 @@ nav a {
   	transition: all .2s;
 }
 
-.main-nav>.has-children:hover>ul {
+.main-nav>.menu-item-has-children:hover>ul {
 	opacity: 1;
 	visibility: visible;
 	
@@ -332,19 +332,19 @@ nav a {
 	transform: translateY(0);
 }
 
-.main-nav .has-children>a:after {
+.main-nav .menu-item-has-children>a:after {
   content: "\f107";
   padding-left: 6px;
-  font: normal normal normal 16px/1 FontAwesome;
+  font: normal normal normal 14px/1 FontAwesome;
 }
 
-.main-nav .has-sub-children>ul {
+.main-nav li ul .menu-item-has-children>ul {
 	background-color: #fff;
 	
 	position: absolute;
 	margin-left: -1.1rem;
 	padding: 1.6rem 2.4rem;
-	width: 160px;
+	width: 150px;
 	left: 100%;
 	
 	opacity: 0;
@@ -366,7 +366,7 @@ nav a {
   	transition: all .2s;
 }
 
-.main-nav .has-sub-children:hover>ul {
+.main-nav li ul .menu-item-has-children:hover>ul {
 	opacity: 1;
 	visibility: visible;
 	
@@ -376,16 +376,17 @@ nav a {
 	transform: translateY(-2.4rem);
 }
 
-.main-nav .has-sub-children>a:after {
+.main-nav li ul .menu-item-has-children>a:after {
   	content: "\f105";
     display: inline-block;
     
-    font: normal normal normal 1.6rem/1 FontAwesome;
+    font: normal normal normal 1.4rem/1 FontAwesome;
 
     right: 0;
-    padding-top: .4rem;
+    padding-top: .6rem;
     padding-right: 2.4rem;
     position: absolute;
+    
 }
 
 /* Mobile Navigation Menu */
@@ -393,7 +394,7 @@ nav a {
 .mobile-menu-container {
 	position: absolute;
 	top: 0;
-	right: 3.2rem;
+	width: 95%;
 }
 
 .menubar-right,
@@ -472,6 +473,10 @@ nav a {
 
 	-webkit-transform: translate3d(100%, 0, 0);
     transform: translate3d(100%, 0, 0);
+}
+
+.main-nav>ul {
+    display: none;
 }
 
 .mobile-menu-open {

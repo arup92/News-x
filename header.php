@@ -50,45 +50,14 @@
 				<div class="container">
 		            <div class="row vertical-align">	
 		                <div class="twelve columns">
-
-		                <?php
-		                	wp_nav_menu( array( 
-								'theme_location' => 'header_menu',
-								'container' => 'nav',
-								'menu_class' => 'main-nav',
-								'depth' => '3'
-							) );
-						?>
-			                <nav>
-			                    <ul class="main-nav">
-									<li><a href="#">HOME</a></li>
-									<li class="has-children">
-										<a href="#">PAGES</a>
-										<ul>
-											<li><a href="#">LOREM</a></li>
-											<li class="has-sub-children">
-
-												<a href="#">ACCOMODATIONS</a>
-												<ul>
-													<li><a href="#">ABOUT ME</a></li>
-													<li><a href="#">ABOUT US</a></li>
-												</ul>
-											</li>
-											<li><a href="#">DOLOR SIT</a></li>
-										</ul>
-									</li>
-									<li class="has-children">
-			                            <a href="#">ABOUT</a>
-										<ul>
-											<li><a href="#">ABOUT TECHY</a></li>
-											<li><a href="#">ABOUT</a></li>
-											<li><a href="#">ABOUT PEOPLE</a></li>
-											<li><a href="#">ABOUT ENVATO</a></li>
-										</ul>
-									</li>
-			                        <li><a href="#">CONTACT</a></li>
-			                    </ul>
-		                	</nav>
+			                <?php
+			                	wp_nav_menu( array( 
+									'theme_location' => 'header_menu',
+									'container' => 'nav',
+									'menu_class' => 'main-nav',
+									'depth' => '3'
+								) );
+							?>
 		                </div> <!-- /.twelve /.columns -->
 		            </div><!-- /.row /.vertical-align -->
 		        </div><!-- /.container -->

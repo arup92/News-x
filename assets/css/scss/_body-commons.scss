@@ -51,11 +51,20 @@
 .list-type-categories {
 	width: 50%;
 	float: left;
+
+	a {
+		color: $dark-color;
+	}
 }
 
 .left-content {
     float: left;
     width: 30%;
+
+    img {
+    	width: 100%;
+    	height: 70px;
+	}
 }
 
 .right-contents {
@@ -72,6 +81,10 @@
 
     p {
     	font-size: 1.3rem;
+    }
+
+    .author {
+    	color: $white-color;
     }
 }
 
@@ -262,6 +275,10 @@
 	h3 {
 		font-size: 1.8rem;
 		font-weight: 700;
+	}
+
+	a {
+		color: $white-color;
 	}
 }
 
