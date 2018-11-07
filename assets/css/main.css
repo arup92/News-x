@@ -514,6 +514,14 @@ nav a {
       padding-bottom: 0;
       margin-bottom: 0; }
 
+.sidebar-widget ul {
+  list-style-type: none; }
+.sidebar-widget li:before {
+  font-family: 'FontAwesome';
+  content: '\f067';
+  margin: 0 5px 0 0;
+  color: #f00; }
+
 /**
  * --------------------------------------------------------------------------------
  * Body Commons
@@ -636,6 +644,9 @@ nav a {
     margin-top: 0; }
   .section-four .post-info {
     margin-bottom: .8rem; }
+
+.section-four .post-overlay {
+  height: 15.9rem; }
 
 .more-fancy-h h5 {
   position: relative;

@@ -32,3 +32,16 @@
 		}
 	}
 }
+.sidebar-widget{
+
+		ul {
+    		list-style-type: none;
+		}
+
+		li:before {
+			font-family: 'FontAwesome';
+			content: '\f067';
+			margin:0 5px 0 0;
+			color: #f00;
+		}
+	}
