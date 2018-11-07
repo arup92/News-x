@@ -5,7 +5,7 @@
 ?>
 <div class="four columns sidebar widget">
 	
-	<?php echo dynamic_sidebar( 'news-x-home-sidebar' ); ?>
+	<?php dynamic_sidebar( 'news-x-home-sidebar' ); ?>
 
 	<div class="sidebar-widget block shadow">
 		<div class="section-title-blue">
