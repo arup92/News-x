@@ -14,7 +14,6 @@
 	$slider_side_arg_one = array(
 		'post_type'			=>	'post',
 		'posts_per_page'	=>	1,
-		'offset'			=>	1,
 		'cat'				=>	'photography',
 		'order'				=>	'DESC',
 	);
@@ -24,6 +23,7 @@
 	$slider_side_arg_two = array(
 		'post_type'			=>	'post',
 		'posts_per_page'	=>	2,
+		'offset'			=>	1,
 		'cat'				=>	'photography',
 		'order'				=>	'DESC',
 	);
