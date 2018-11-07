@@ -519,8 +519,8 @@ nav a {
 .sidebar-widget li:before {
   font-family: 'FontAwesome';
   content: '\f067';
-  margin: 0 5px 0 0;
-  color: #f00; }
+  margin: 0 1rem 0 0;
+  color: #404040; }
 
 /**
  * --------------------------------------------------------------------------------
