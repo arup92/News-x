@@ -35,7 +35,7 @@
 				<div class="container">
 					<div class="row vartical-align header-main">
 						<div class="six columns">
-								<img src="img/logo2.png" alt="ad banner">
+								 <?php get_template_part( 'template-parts/header/site', 'branding' ); ?>
 						</div><!-- /.six ./columns -->
 						<div class="six columns ">
 							<div class="right-side-ad vartical-align">

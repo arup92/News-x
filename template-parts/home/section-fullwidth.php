@@ -25,7 +25,7 @@
 			while ( $block_item->have_posts() ) : $block_item->the_post();
 	?>
 		<div class="three columns">
-			<div class="big-cat-section">
+			<div class="fullwidth-post-section">
 				<?php
 					if ( has_post_thumbnail() ):
 						the_post_thumbnail( 'full' );
