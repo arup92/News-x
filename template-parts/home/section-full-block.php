@@ -3,13 +3,13 @@
  * Template part for displaying full block section in homepage
  */
 
-	//$cat_id = intval( get_theme_mod( 'ct-cats-elect-setting', 1 ) );
+	$cat_id = intval( get_theme_mod( 'news_x_big_section_category_setting', 1 ) );
 
 	$list_args = array(
 		'post_type'			=>	'post',
-		'posts_per_page'	=>	6,
+		'posts_per_page'	=>	10,
 		'offset'			=>	2,
-		'cat'				=>	'photography',
+		'cat'				=>	$cat_id,
 		'order'				=>	'DESC',
 	);
 
@@ -18,14 +18,14 @@
 	$block_args = array(
 		'post_type'			=>	'post',
 		'posts_per_page'	=>	2,
-		'cat'				=>	'photography',
+		'cat'				=>	$cat_id,
 		'order'				=>	'DESC',
 	);
 
 	$block_item  = new WP_Query( $block_args );
 ?>
 <div class="section-title-red">
-	<span class="title">Business</span>
+	<span class="title"><?php echo esc_html( get_theme_mod( 'news_x_big_section_title_setting', 'News' ) ); ?></span>
 </div><!-- /.section-title-red -->
 
 <div class="big-category-section">

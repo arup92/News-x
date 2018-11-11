@@ -2,7 +2,8 @@
 
 register_nav_menus( array (
     'header_menu' => 'Header Menu',
-	'mobile_menu' => 'Mobile Menu'
+	'mobile_menu' => 'Mobile Menu',
+	'footer_menu' => 'Footer Menu'
  ) );
 
 /*

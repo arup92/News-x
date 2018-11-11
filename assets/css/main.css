@@ -162,11 +162,14 @@ a, a:hover, a:focus {
 .social-icons .youtube:after {
   content: "\f16a";
 }
-.social-icons .google-plus:after {
-  content: "\f2b3";
+.social-icons .whatsapp:after {
+  content: "\f232";
 }
 .social-icons .instagram:after {
   content: "\f16d";
+}
+.social-icons .linkedin:after {
+  content: "\f0e1";
 }
 
 .right-side-account {
@@ -463,6 +466,24 @@ nav a {
   -ms-transform: rotate(-180deg);
   -webkit-transform: rotate(-180deg);
   transform: rotate(-180deg);
+}
+
+/* serch Option Costamization */
+input, textarea, select, fieldset {
+  margin-bottom: 1.5rem;
+  font-size: 1.2rem;
+  line-height: 2.1rem;
+  color: #444;
+  border: .1rem solid #e1e1e1;
+  width: 100%;
+  max-width: 100%;
+  height: 3.4rem;
+  padding: .3rem .9rem;
+}
+
+.screen-reader-text {
+  display: none;
+  visibility: hidden;
 }
 
 /**
@@ -958,10 +979,13 @@ nav a {
   float: right;
   color: #fff;
 }
-.buttom-bar .right-side-privacy p {
-  margin-bottom: 0;
-  font-size: 1.4rem;
-  line-height: 2.6rem;
+.buttom-bar .right-side-privacy a {
+  color: white;
+}
+.buttom-bar .right-side-privacy li {
+  list-style-type: none;
+  display: inline-block;
+  margin: 0 2.0rem 0 0;
 }
 
 /**
@@ -971,11 +995,11 @@ nav a {
 */
 .single-post-text {
   background-color: #fff;
+  padding: 2.6rem;
 }
 .single-post-text p {
   font-size: 1.8rem;
   line-height: 2.6rem;
-  padding: 1.5rem;
 }
 
 .size-full {

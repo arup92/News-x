@@ -59,12 +59,18 @@
 		}
 
 		.right-side-privacy {
+
+			a {
+				color:$white-color;
+			}
+			
+			li {
+    			list-style-type: none;
+    			display: inline-block;
+    			margin: 0 2.0rem 0 0;
+			} 
+
 			float: right;
 			color:#fff;
-			p {
-				margin-bottom: 0;
-				font-size: 1.4rem;
-				line-height: 2.6rem;
-			}
 		}
 	}

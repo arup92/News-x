@@ -3,12 +3,12 @@
  * Template part for displaying full container blog section in homepage
  */
 
-	//$cat_id = intval( get_theme_mod( 'ct-cats-elect-setting', 1 ) );
+	$cat_id = intval( get_theme_mod( 'news_x_fullwidth-overlay_section_category_setting', 1 ) );
 
 	$block_args = array(
 		'post_type'			=>	'post',
 		'posts_per_page'	=>	4,
-		'cat'				=>	'photography',
+		'cat'				=>	$cat_id,
 		'order'				=>	'DESC',
 	);
 
@@ -17,7 +17,7 @@
 
 <div class="container block shadow section-four">
 	<div class="section-title-red">
-		<span class="title">News</span>
+		<span class="title"><?php echo esc_html( get_theme_mod( 'news_x_fullwidth-overlay_section_title_setting', 'News' ) ); ?></span>
 	</div><!-- /.section-title-red -->
 	<div class="row main-banner">
 

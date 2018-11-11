@@ -86,22 +86,7 @@
 				</div><!-- /.container -->
 			</div><!-- /.u-full-width /.footer -->
 
-			<div class="u-full-width buttom-bar">
-				<div class="container">
-					<div class="row vartical-align">
-						<div class="five columns">
-							<div class="right-side-cp-text">
-								<p>© Copyright  Crafttheme.com</p>
-							</div><!-- /five /.columns -->
-						</div><!-- /right-side-cp-text -->
-						<div class="seven columns">
-							<div class="right-side-privacy">
-								<p>Privacy Policy</p>
-							</div><!-- /right-side-privacy -->
-						</div><!-- /.seven /.columns -->
-					</div><!-- /.row /.vartical-align -->
-				</div><!-- /.container -->
-			</div><!-- /.u-full-width /.buttom-bar -->  
+		<?php get_template_part( 'template-parts/footer/bottom', 'bar' ); ?>
 		<?php wp_footer(); ?>
   	</body>
 </html>
