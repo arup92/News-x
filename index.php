@@ -9,8 +9,7 @@
 							<?php get_template_part( 'template-parts/home/section', 'full-block' ); ?>
 						</div><!-- /.section-two /.block shadow /.clearfix -->
 						<div class="section-three clearfix">
-							<?php get_template_part( 'template-parts/home/section', 'half-block' ); ?>
-							<?php get_template_part( 'template-parts/home/section', 'half-block' ); ?>
+							<?php get_template_part( 'template-parts/home/section', 'half-block' ); ?>\
 						</div><!-- /.section-three /.block /.shadow /.clearfix -->
 					</div> <!-- /.eight .columns -->
 					<?php get_sidebar(); ?>

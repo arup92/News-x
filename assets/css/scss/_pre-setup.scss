@@ -185,12 +185,15 @@ a, a:hover, a:focus {
 		content: "\f16a";
 	}
 
-	.google-plus:after {
-		content: "\f2b3";
+	.whatsapp:after {
+		content: "\f232";
 	}
 
 	.instagram:after {
 		content: "\f16d";
+	}
+	.linkedin:after {
+		content: "\f0e1";
 	}
 }
 
@@ -524,6 +527,25 @@ nav a {
     transform: rotate(-180deg);
 }
 
+/* serch Option Costamization */
+
+input, textarea, select, fieldset {
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+    line-height: 2.1rem;
+    color: #444;
+    border: .1rem solid #e1e1e1;
+    width: 100%;
+    max-width: 100%;
+    height: 3.4rem;
+    padding: .3rem .9rem;
+}
+
+.screen-reader-text {
+    display: none;
+    visibility: hidden;
+}
+
 /**
  * 
  * #.# Media Queries
@@ -543,3 +565,4 @@ nav a {
 		display: none;
 	}
 }
+

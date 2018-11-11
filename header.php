@@ -9,27 +9,9 @@
 		<?php wp_head(); ?>
 	</head>
 	<body>
-		<div class="u-full-width top-bar">
-			<div class="top-bar-style"></div><!-- /.top-bar-style -->
-			<div class="container">
-				<div class="row vartical-align">
-					<div class="five columns">
-						<ul class="social-icons">
-							<li><a href="#" class="social-icon facebook"></a></li>
-							<li><a href="#" class="social-icon twitter"></a></li>
-							<li><a href="#" class="social-icon youtube"></a></li>
-							<li><a href="#" class="social-icon google-plus"></a></li>
-							<li><a href="#" class="social-icon instagram"></a></li>
-						</ul>
-					</div><!-- /.five /.columns -->
-					<div class="seven columns">
-						<div class="right-side-account">
-							<p>Are you a member? <a href="#">Register or Login</a></p>
-						</div>
-					</div><!-- /.seven columns -->
-				</div> <!-- /.row vartical-align -->
-			</div><!-- /.container -->
-		</div><!-- /.u-full-width /.top-bar -->
+
+		<?php get_template_part( 'template-parts/header/top', 'bar' ); ?>
+
 		<header>
 			<div class="u-full-width header">
 				<div class="container">
