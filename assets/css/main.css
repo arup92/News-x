@@ -120,6 +120,7 @@ a, a:hover, a:focus {
 .social-icons {
   float: left;
   margin-left: 1rem;
+<<<<<<< HEAD
   line-height: 1.6rem; }
   .social-icons li {
     display: inline-block;
@@ -140,6 +141,37 @@ a, a:hover, a:focus {
     content: "\f16d"; }
   .social-icons .linkedin:after {
     content: "\f0e1"; }
+=======
+  line-height: 1.6rem;
+}
+.social-icons li {
+  display: inline-block;
+  margin-right: 1rem;
+  list-style-type: none;
+}
+.social-icons .social-icon:after {
+  color: white;
+  font: normal normal normal 1.6rem/1 FontAwesome;
+}
+.social-icons .facebook:after {
+  content: "\f09a";
+}
+.social-icons .twitter:after {
+  content: "\f099";
+}
+.social-icons .youtube:after {
+  content: "\f16a";
+}
+.social-icons .whatsapp:after {
+  content: "\f232";
+}
+.social-icons .instagram:after {
+  content: "\f16d";
+}
+.social-icons .linkedin:after {
+  content: "\f0e1";
+}
+>>>>>>> 99800c6e1c91196a2915dd586885580b716e7190
 
 .right-side-account {
   float: right;
@@ -411,6 +443,24 @@ input, textarea, select, fieldset {
 .screen-reader-text {
   display: none;
   visibility: hidden; }
+
+/* serch Option Costamization */
+input, textarea, select, fieldset {
+  margin-bottom: 1.5rem;
+  font-size: 1.2rem;
+  line-height: 2.1rem;
+  color: #444;
+  border: .1rem solid #e1e1e1;
+  width: 100%;
+  max-width: 100%;
+  height: 3.4rem;
+  padding: .3rem .9rem;
+}
+
+.screen-reader-text {
+  display: none;
+  visibility: hidden;
+}
 
 /**
  * 
@@ -798,6 +848,7 @@ input, textarea, select, fieldset {
 .buttom-bar {
   background-color: #020202;
   padding: 1.6rem 0;
+<<<<<<< HEAD
   border-top: solid 1px; }
   .buttom-bar .right-side-cp-text {
     color: #fff; }
@@ -814,6 +865,30 @@ input, textarea, select, fieldset {
       list-style-type: none;
       display: inline-block;
       margin: 0 2.0rem 0 0; }
+=======
+  border-top: solid 1px;
+}
+.buttom-bar .right-side-cp-text {
+  color: #fff;
+}
+.buttom-bar .right-side-cp-text p {
+  margin-bottom: 0;
+  font-size: 1.4rem;
+  line-height: 2.6rem;
+}
+.buttom-bar .right-side-privacy {
+  float: right;
+  color: #fff;
+}
+.buttom-bar .right-side-privacy a {
+  color: white;
+}
+.buttom-bar .right-side-privacy li {
+  list-style-type: none;
+  display: inline-block;
+  margin: 0 2.0rem 0 0;
+}
+>>>>>>> 99800c6e1c91196a2915dd586885580b716e7190
 
 /**
  * --------------------------------------------------------------------------------
@@ -822,10 +897,19 @@ input, textarea, select, fieldset {
 */
 .single-post-text {
   background-color: #fff;
+<<<<<<< HEAD
   padding: 2.6rem; }
   .single-post-text p {
     font-size: 1.8rem;
     line-height: 2.6rem; }
+=======
+  padding: 2.6rem;
+}
+.single-post-text p {
+  font-size: 1.8rem;
+  line-height: 2.6rem;
+}
+>>>>>>> 99800c6e1c91196a2915dd586885580b716e7190
 
 .size-full {
   width: 100%;
