@@ -54,8 +54,6 @@ function ct_widgets_init() {
 		'name'          => __( 'Footer Right', 'news-x' ),
 		'id'            => 'news-x-footer-right',
 		'description'   => __( 'Add widgets here to appear on your right footer section.', 'news-x' ),
-<<<<<<< HEAD
-=======
 		'before_widget' => '<div id="%1$s" class="%2$s four columns">',
 		'after_widget'  => '</div><!-- /.four columns -->',
 		'before_title'  => '<h3 class="footer-widget-title">',
@@ -66,7 +64,6 @@ function ct_widgets_init() {
 		'name'          => __( 'Sidebar For Single Post', 'news-x' ),
 		'id'            => 'news-x-post-page-right',
 		'description'   => __( 'Add widgets here to appear on your post page sidebar section.', 'news-x' ),
->>>>>>> 99800c6e1c91196a2915dd586885580b716e7190
 		'before_widget' => '<div id="%1$s" class="%2$s four columns">',
 		'after_widget'  => '</div><!-- /.four columns -->',
 		'before_title'  => '<h3 class="footer-widget-title">',
