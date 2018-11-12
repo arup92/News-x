@@ -515,35 +515,6 @@ input, textarea, select, fieldset {
 
 /**
  * --------------------------------------------------------------------------------
- * side-Bar style
- * --------------------------------------------------------------------------------
-*/
-.sidebar {
-  margin-top: 2.4rem; }
-  .sidebar .sidebar-widget:last-child {
-    margin-bottom: 0; }
-  .sidebar .list-item {
-    border-bottom: 0.1rem solid #efefef;
-    padding-bottom: 1rem;
-    margin-bottom: 1rem;
-    display: inline-block; }
-    .sidebar .list-item p {
-      margin-bottom: 0rem; }
-    .sidebar .list-item:last-child {
-      border-bottom: unset;
-      padding-bottom: 0;
-      margin-bottom: 0; }
-
-.sidebar-widget ul {
-  list-style-type: none; }
-.sidebar-widget li:before {
-  font-family: 'FontAwesome';
-  content: '\f067';
-  margin: 0 1rem 0 0;
-  color: #404040; }
-
-/**
- * --------------------------------------------------------------------------------
  * Body Commons
  * --------------------------------------------------------------------------------
 */
@@ -762,6 +733,18 @@ input, textarea, select, fieldset {
   content: '\f106';
   color: white;
   font-weight: 700; }
+.block .green div {
+  background-color: mediumturquoise;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px; }
+.block .green .slide-prev:after {
+  content: '\f107';
+  color: white;
+  font-weight: 700; }
+.block .green .slide-next:after {
+  content: '\f106';
+  color: white;
+  font-weight: 700; }
 .block .slide-nav {
   top: 2.4rem;
   right: 2.4rem; }
@@ -773,6 +756,45 @@ input, textarea, select, fieldset {
   float: left; }
   .single-post-category:last-child {
     margin-right: 0; }
+
+/**
+ * --------------------------------------------------------------------------------
+ * side-Bar style
+ * --------------------------------------------------------------------------------
+*/
+.sidebar {
+  margin-top: 2.4rem; }
+  .sidebar .sidebar-widget:last-child {
+    margin-bottom: 0; }
+  .sidebar .list-item {
+    border-bottom: 0.1rem solid #efefef;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    display: inline-block; }
+    .sidebar .list-item p {
+      margin-bottom: 0rem; }
+    .sidebar .list-item:last-child {
+      border-bottom: unset;
+      padding-bottom: 0;
+      margin-bottom: 0; }
+
+.sidebar-widget ul {
+  list-style-type: none; }
+.sidebar-widget li:before {
+  font-family: 'FontAwesome';
+  content: '\f067';
+  margin: 0 1rem 0 0;
+  color: #404040; }
+.sidebar-widget .widget-nav {
+  display: inline-block;
+  position: absolute;
+  top: 2.4rem;
+  right: 2.4rem;
+  z-index: 1; }
+  .sidebar-widget .widget-nav .slide-prev:after {
+    content: "\f104"; }
+  .sidebar-widget .widget-nav .slide-next:after {
+    content: "\f105"; }
 
 /**
  * --------------------------------------------------------------------------------

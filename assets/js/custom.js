@@ -20,6 +20,22 @@
 		$( '.slider-banner' ).slick( 'slickNext' );
 	} );
 
+	$('.widget-slider').slick( {
+		dots			: false,
+		arrows			: false,
+		autoplay		: true,
+		autoplaySpeed	: 4000,
+		cssEase			: 'ease-out',
+	} );
+
+	$( '.widget-nav .slide-prev' ).click( function(){
+		$( '.widget-slider' ).slick( 'slickPrev' );
+	} );
+
+	$( '.widget-nav .slide-next' ).click( function() {
+		$( '.widget-slider' ).slick( 'slickNext' );
+	} );
+
 	/**
 	 * Category Slider Vertical
 	 */
