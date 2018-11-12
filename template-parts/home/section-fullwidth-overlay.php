@@ -25,7 +25,7 @@
 			if ( $block_item->have_posts() ) :
 				while ( $block_item->have_posts() ) : $block_item->the_post();
 		?>
-			<div class="three columns">
+			<div class="fullwidth-sections nx">
 				<div class="post-overlay zoom">
 					<div class="overlay"></div><!-- /.overlay -->
 					<?php
@@ -37,7 +37,7 @@
 						<a href="<?php the_permalink(); ?>"><h3><?php the_title(); ?></h3></a>
 					</div><!-- /.post-content -->
 				</div>
-			</div> <!-- /.three .columns -->
+			</div> <!-- /.fullwidth-overlay -->
 		<?php
 				endwhile;
 			else :

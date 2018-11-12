@@ -11,50 +11,6 @@
 			dynamic_sidebar( 'news-x-home-sidebar' );
 		endif;
 	?>
-	<div class="sidebar-widget block shadow">
-		<div class="section-title-blue">
-		<span class="title">News</span>
-	</div><!-- /.sidebar-widget /.block /.shadow -->
-	
-	<div class="list-item">
-		<div class="left-content">
-			<img src="img/blog-post.jpg" class="full-image" alt="blog post">
-		</div><!-- /.left-content -->
-		<div class="right-contents">
-			<h2>Express Recipes: How to make Creamy Papaya Raita</h2>
-			<p><span class="author">arup</span> -  Apr 22, 2015</p>
-		</div><!-- /.right-content -->
-	</div><!-- /.list-item -->
-	
-	<div class="list-item">
-		<div class="left-content">
-			<img src="img/blog-post.jpg" class="full-image" alt="blog post">
-		</div><!-- /.left-content -->
-		<div class="right-contents">
-			<h2>Express Recipes: How to make Creamy Papaya Raita</h2>
-			<p><span class="author">arup</span> -  Apr 22, 2015</p>
-		</div><!-- /.right-contents -->
-	</div><!-- /.list-item -->
-
-	<div class="list-item">
-		<div class="left-content">
-			<img src="img/blog-post.jpg" class="full-image" alt="blog post">
-		</div><!-- /.left-content -->
-		<div class="right-contents">
-			<h2>Express Recipes: How to make Creamy Papaya Raita</h2>
-			<p><span class="author">arup</span> -  Apr 22, 2015</p>
-		</div><!-- /.right-contents -->
-	</div><!-- /.list-item -->
-
-	<div class="list-item">
-		<div class="left-content">
-			<img src="img/blog-post.jpg" class="full-image" alt="blog post">
-		</div><!-- /.left-content -->
-		<div class="right-contents">
-			<h2>Express Recipes: How to make Creamy Papaya Raita</h2>
-			<p><span class="author">arup</span> -  Apr 22, 2015</p>
-		</div><!-- /.right-contents -->
-	</div><!-- /.list-item -->
 </div><!-- /four /.columns /.sidebar /.widget -->
 
 	<div class="sidebar-widget block shadow">
