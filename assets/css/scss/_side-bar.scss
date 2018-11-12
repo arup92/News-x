@@ -33,15 +33,35 @@
 	}
 }
 .sidebar-widget{
+	ul {
+		list-style-type: none;
+	}
 
-		ul {
-    		list-style-type: none;
+	li:before {
+		font-family: 'FontAwesome';
+		content: '\f067';
+		margin:0 1rem 0 0;
+		color: $dark-color;
+	}
+
+	.widget-nav {
+
+		display: inline-block;
+		position: absolute;
+		top: 2.4rem;
+		right: 2.4rem;
+		z-index: 1;
+
+		.slide-prev {
+			&:after {
+				content: "\f104";
+			}
 		}
 
-		li:before {
-			font-family: 'FontAwesome';
-			content: '\f067';
-			margin:0 1rem 0 0;
-			color: $dark-color;
+		.slide-next {
+			&:after {
+				content: "\f105";
+			}
 		}
 	}
+}

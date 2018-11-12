@@ -330,6 +330,31 @@
 		}
 	}
 
+	.green {
+
+		div {
+			background-color: $green-color;
+			border-top-left-radius: 2px;
+			border-top-right-radius: 2px;
+		}
+
+		.slide-prev {
+			&:after {
+				content: '\f107';
+				color: $white-color;
+				font-weight: 700;
+			}
+		}
+
+		.slide-next {
+			&:after {
+				content: '\f106';
+				color: $white-color;
+				font-weight: 700;
+			}
+		}
+	}
+
 	.slide-nav {	
 		top: 2.4rem;
 		right: 2.4rem;
