@@ -131,13 +131,104 @@ function newsx_homepage_setup_setup( $wp_customize ) {
 		'description' => __( 'Description of what this panel does.', 'news-x' ),
 	) );
 
+	// Slider Section
+	$wp_customize->add_section( 'news_x_slider_section', array(
+		'title'		=>	'Slider Section',
+		'priority'	=>	10,
+		'panel' => 'news_x_big_section_panel',
+	) );
+
+	/******************************** Slider Category *****************************/
+	// Credits: https://blog.josemcastaneda.com/2015/05/13/customizer-dropdown-category-selection/
+	// create an empty array
+	$cats = array();
+	 
+	// we loop over the categories and set the names and
+	// labels we need
+	foreach ( get_categories() as $categories => $category ){
+		$cats[$category->term_id] = $category->name;
+	}
+	 
+	 /******************************** Slider Category Select *****************************/
+	// we register our new setting
+	$wp_customize->add_setting( 'news_x_slider_category_setting', array(
+	    'default' => 1,
+	    'sanitize_callback' => 'absint'
+	) );
+
+	// we create our control for the setting
+	$wp_customize->add_control( 'news_x_slider_category_control', array(
+		'label'		=>	__( 'Select Slider Category', 'news-x' ),
+	    'settings' => 'news_x_slider_category_setting',
+	    'type' => 'select',
+	    'choices' => $cats,
+	    'section' => 'news_x_slider_section',
+	) );
+	//---------------------------------------------------------//
+
+	/******************************** Featured block *****************************/
+	// Credits: https://blog.josemcastaneda.com/2015/05/13/customizer-dropdown-category-selection/
+	// create an empty array
+	$cats = array();
+	 
+	// we loop over the categories and set the names and
+	// labels we need
+	foreach ( get_categories() as $categories => $category ){
+		$cats[$category->term_id] = $category->name;
+	}
+	 
+	 /******************************** Featured Block Category Select *****************************/
+	// we register our new setting
+	$wp_customize->add_setting( 'news_x_featured_category_setting', array(
+	    'default' => 1,
+	    'sanitize_callback' => 'absint'
+	) );
+
+	// we create our control for the setting
+	$wp_customize->add_control( 'news_x_featured_category_control', array(
+		'label'		=>	__( 'Select Featured Block Category', 'news-x' ),
+	    'settings' => 'news_x_featured_category_setting',
+	    'type' => 'select',
+	    'choices' => $cats,
+	    'section' => 'news_x_slider_section',
+	) );
+	//---------------------------------------------------------//
+
+	// Big Category section
 	$wp_customize->add_section( 'news_x_big_category_section', array(
 		'title'		=>	'Big Category Section',
 		'priority'	=>	10,
 		'panel' => 'news_x_big_section_panel',
 	) );
 
-	// Display bottom bar copyright text
+	/******************************** Big Category *****************************/
+	// Credits: https://blog.josemcastaneda.com/2015/05/13/customizer-dropdown-category-selection/
+	// create an empty array
+	$cats = array();
+	 
+	// we loop over the categories and set the names and
+	// labels we need
+	foreach ( get_categories() as $categories => $category ){
+		$cats[$category->term_id] = $category->name;
+	}
+	 
+	 /******************************** Big Category Select *****************************/
+	// we register our new setting
+	$wp_customize->add_setting( 'news_x_big_section_category_setting', array(
+	    'default' => 1,
+	    'sanitize_callback' => 'absint'
+	) );
+
+	// we create our control for the setting
+	$wp_customize->add_control( 'news_x_big_section_category_control', array(
+		'label'		=>	__( 'Select Category', 'news-x' ),
+	    'settings' => 'news_x_big_section_category_setting',
+	    'type' => 'select',
+	    'choices' => $cats,
+	    'section' => 'news_x_big_category_section',
+	) );
+	//---------------------------------------------------------//
+
 	$wp_customize->add_setting( 'news_x_big_section_title_setting', array(
 		'default'	=>	'News',
 		//'sanitize_callback' => 'sanitize_textarea_field',
@@ -150,7 +241,7 @@ function newsx_homepage_setup_setup( $wp_customize ) {
 		'settings'	=>	'news_x_big_section_title_setting',
 	) ) );
 
-	/********************************  *****************************/
+	/******************************** Big Category *****************************/
 	// Credits: https://blog.josemcastaneda.com/2015/05/13/customizer-dropdown-category-selection/
 	// create an empty array
 	$cats = array();
