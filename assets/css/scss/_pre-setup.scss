@@ -229,7 +229,7 @@ a, a:hover, a:focus {
 	background-color: #fff;
 }
 .header-main {
-    padding: 2.2rem 0;
+    padding: .5rem 0;
 }
 
 .site-header {
@@ -245,11 +245,7 @@ a, a:hover, a:focus {
 	margin: 2rem 0px;
 
 	a {
-		display: -webkit-flex;
-		display: -moz-flex;
-		display: -ms-flex;
-		display: -o-flex;
-		display: flex;
+		display: inline-block;
 	}
 }
 
@@ -290,7 +286,7 @@ nav a {
 .main-nav>li>a {
 	color: $dark-color;
 	display: block;
-	padding: 2.4rem 1.6rem;
+	padding: 1.4rem 1.6rem;
 }
 
 .white-header .main-nav>li>a {
@@ -380,17 +376,16 @@ nav a {
 }
 
 .main-nav li ul .menu-item-has-children>a:after {
-  	content: "\f105";
-    display: inline-block;
-    
-    font: normal normal normal 1.4rem/1 FontAwesome;
+	content: "\f105";
+	display: inline-block;
+	font: normal normal normal 1.4rem/1 FontAwesome;
 
-    right: 0;
-    padding-top: .6rem;
-    padding-right: 2.4rem;
-    position: absolute;
-    
+	right: 0;
+	padding-top: .6rem;
+	padding-right: 2.4rem;
+	position: absolute;
 }
+
 
 /* Mobile Navigation Menu */
 

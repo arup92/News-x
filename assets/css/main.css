@@ -166,7 +166,7 @@ a, a:hover, a:focus {
   background-color: #fff; }
 
 .header-main {
-  padding: 2.2rem 0; }
+  padding: .5rem 0; }
 
 .site-header {
   position: relative;
@@ -177,11 +177,7 @@ a, a:hover, a:focus {
 .site-title {
   margin: 2rem 0px; }
   .site-title a {
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flex;
-    display: -o-flex;
-    display: flex; }
+    display: inline-block; }
 
 .right-side-ad {
   float: right; }
@@ -212,7 +208,7 @@ nav a {
 .main-nav > li > a {
   color: #404040;
   display: block;
-  padding: 2.4rem 1.6rem; }
+  padding: 1.4rem 1.6rem; }
 
 .white-header .main-nav > li > a {
   color: #1f1f1f;
