@@ -4,9 +4,6 @@
  */
 ?>
 <div class="four columns sidebar widget">
-
-	<?php dynamic_sidebar( 'news-x-home-sidebar' ); ?>
-
 	<?php
 		if ( is_single() ) :
 			dynamic_sidebar( 'news-x-single-post-right' );

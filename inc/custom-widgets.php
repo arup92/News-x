@@ -59,16 +59,6 @@ function ct_widgets_init() {
 		'before_title'  => '<h3 class="footer-widget-title">',
 		'after_title'   => '</h3>',
 	) );
-
-	register_sidebar( array(
-		'name'          => __( 'Sidebar For Single Post', 'news-x' ),
-		'id'            => 'news-x-post-page-right',
-		'description'   => __( 'Add widgets here to appear on your post page sidebar section.', 'news-x' ),
-		'before_widget' => '<div id="%1$s" class="%2$s four columns">',
-		'after_widget'  => '</div><!-- /.four columns -->',
-		'before_title'  => '<h3 class="footer-widget-title">',
-		'after_title'   => '</h3>',
-	) );
 }
 
 endif;
