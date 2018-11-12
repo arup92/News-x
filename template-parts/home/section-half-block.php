@@ -7,7 +7,7 @@
 
 	$list_args = array(
 		'post_type'			=>	'post',
-		'posts_per_page'	=>	10,
+		'posts_per_page'	=>	3,
 		'offset'			=>	1,
 		'cat'				=>	$cat_id,
 		'order'				=>	'DESC',
@@ -89,7 +89,7 @@ $cat_id = intval( get_theme_mod( 'news_x_second_half_section_category_setting', 
 
 	$list_args = array(
 		'post_type'			=>	'post',
-		'posts_per_page'	=>	10,
+		'posts_per_page'	=>	3,
 		'offset'			=>	1,
 		'cat'				=>	$cat_id,
 		'order'				=>	'DESC',

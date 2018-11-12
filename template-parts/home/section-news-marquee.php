@@ -14,7 +14,7 @@
 <div class="container">
 	<div class="row news-marquee shadow clearfix">
 		<div class="exclusive-news">
-			<span><?php echo esc_html( get_theme_mod( 'news_x_flash_post_section_title_setting', 'News' ) ); ?></span>
+			<span><?php echo esc_html( get_theme_mod( 'news_x_flash_post_section_title_setting', 'Braking News' ) ); ?></span>
 		</div><!-- /.exclusive-news -->
 		<div class="marquee" data-gap="0" data-duplicated="true">
 			<?php

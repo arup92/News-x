@@ -24,7 +24,7 @@
 		if ( $block_item->have_posts() ) :
 			while ( $block_item->have_posts() ) : $block_item->the_post();
 	?>
-		<div class="three columns">
+		<div class="fullwidth-sections last">
 			<div class="fullwidth-post-section">
 				<?php
 					if ( has_post_thumbnail() ):
