@@ -89,6 +89,12 @@
     }
 }
 
+ .cat-slider-vertical {
+ 	.list-item {
+ 		height: 7.08rem;
+ 	}
+ }
+
 .list-item {
 	display: inline-block;
 	border-bottom: 0.1rem solid #efefef;
@@ -289,7 +295,7 @@
 }
 
 .post-overlay {
-	height: 19.9rem;
+	height: 19rem;
 	margin-bottom: .2rem;
 	position: relative;
 	overflow: hidden;
