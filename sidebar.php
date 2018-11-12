@@ -11,7 +11,6 @@
 			dynamic_sidebar( 'news-x-home-sidebar' );
 		endif;
 	?>
-</div><!-- /four /.columns /.sidebar /.widget -->
 
 	<div class="sidebar-widget block shadow">
 		<div class="section-title-blue">
