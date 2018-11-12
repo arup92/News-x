@@ -3,28 +3,32 @@
 	 * Template part for displaying news slider section in homepage
 	 */
 
+	$cat_id = intval( get_theme_mod( 'news_x_slider_category_setting', 1 ) );
 	$slider_args = array(
 		'post_type'			=>	'post',
 		'posts_per_page'	=>	5,
+		'cat'				=>	$cat_id,
 		'order'				=>	'DESC',
 	);
 
 	$slider_item  = new WP_Query( $slider_args );
 
+	$cat_id = intval( get_theme_mod( 'news_x_featured_category_setting', 1 ) );
 	$slider_side_arg_one = array(
 		'post_type'			=>	'post',
 		'posts_per_page'	=>	1,
-		'cat'				=>	'photography',
+		'cat'				=>	$cat_id,
 		'order'				=>	'DESC',
 	);
 
 	$slider_side_item_one  = new WP_Query( $slider_side_arg_one );
 
+	$cat_id = intval( get_theme_mod( 'news_x_featured_category_setting', 1 ) );
 	$slider_side_arg_two = array(
 		'post_type'			=>	'post',
 		'posts_per_page'	=>	2,
 		'offset'			=>	1,
-		'cat'				=>	'photography',
+		'cat'				=>	$cat_id,
 		'order'				=>	'DESC',
 	);
 
