@@ -42,6 +42,21 @@
 				<?php get_sidebar(); ?>
 		</div><!-- /.row -->	
 	</div><!-- /.container -->
+	<div class="container pagination-single">
+		<div class="eight columns">
+			<div class="pagination-nav">
+				<?php $prev_post = get_adjacent_post( false, '', false ); ?>
+					<?php if ( is_a( $prev_post, 'WP_Post' ) ) { ?>
+					<a href="<?php echo esc_url( get_permalink( get_adjacent_post( false, '', false)->ID ) ); ?>" class="btn prev"><?php echo esc_html( get_the_title( get_adjacent_post( false, '', false)->ID ) ); ?></a>
+				<?php } ?>
+
+				<?php $next_post = get_adjacent_post( false, '', true ); ?>
+					<?php if ( is_a( $next_post, 'WP_Post' ) ) { ?>
+					<a href="<?php echo esc_url( get_permalink( get_adjacent_post( false, '', true)->ID ) ); ?>" class="btn next"><?php echo esc_html( get_the_title( get_adjacent_post( false, '', true)->ID ) ); ?></a>
+				<?php } ?>
+			</div><!-- /.pagination-nav -->
+		</div><!-- /.eightcolumn -->
+	</div><!-- /.pagination-single-->
 
 <?php 
 	endwhile;

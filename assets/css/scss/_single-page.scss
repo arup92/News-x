@@ -64,3 +64,44 @@ label {
     overflow: auto;
     z-index: 1;
 }
+
+.content-footer {
+    border-top: 1px solid #1f1f1f;
+    padding-top: 2.4rem;
+    clear: both;
+}
+.author-info {
+
+	.author-image {
+		float: left;
+		padding-right: 1.6rem;
+	}
+	.comment-wrapper {
+		margin-bottom: 0;
+		border-left: 1px solid #1f1f1f;
+	}
+	.comment-wrapper {
+		display: table;
+		padding-left: 1.6rem;
+		margin-bottom: 3.6rem;
+}	
+}
+.pagination-single {
+	.pagination-nav {
+		.next:after  {
+    		content: "\f105";
+    		font: normal normal normal 2.4rem/1 FontAwesome;
+		}
+		.prev:after {
+    		content: "\f104";
+    		font: normal normal normal 2.4rem/1 FontAwesome;
+		}
+	}
+	.next {
+    	float: right;
+	}
+	
+	.prev {
+		float: left;
+	}
+}
