@@ -995,6 +995,10 @@ input, textarea, select, fieldset {
 .sidebar-widget .widget-nav .slide-next:after {
   content: "\f105";
 }
+.sidebar-widget .textwidget img {
+  width: 100%;
+  height: auto;
+}
 
 /**
  * --------------------------------------------------------------------------------
@@ -1009,27 +1013,23 @@ input, textarea, select, fieldset {
   color: #fff;
   padding: 1.6rem 0;
 }
-.footer .recent-posts h5 {
+.footer .widget_recent_comments h3 {
   color: #fff;
   border-bottom: 0;
   font-size: 2.4rem;
   font-weight: 700;
-  margin-bottom: 2.6rem;
+  margin-bottom: 2rem;
   margin-top: .2rem;
 }
-.footer .recent-posts h2 {
+.footer .widget_recent_comments .recentcomments {
   color: #fff;
+  list-style-type: none;
 }
-.footer .pupolar-posts h5 {
-  color: #fff;
-  border-bottom: 0;
-  font-size: 2.4rem;
-  font-weight: 700;
-  margin-bottom: 2.6rem;
-  margin-top: .2rem;
-}
-.footer .pupolar-posts h2 {
-  color: #fff;
+.footer .widget_recent_comments .recentcomments:before {
+  font-family: 'FontAwesome';
+  content: '\f067';
+  margin: 0 1rem 0 0;
+  color: #FFF;
 }
 
 .buttom-bar {
@@ -1184,5 +1184,9 @@ label {
   .list-type-categories {
     width: 100%;
     margin: 10px 0px 10px 0px;
+  }
+
+  .footer .widget-footer-left {
+    padding: 1.6rem 0 0 1.6rem;
   }
 }
