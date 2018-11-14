@@ -27,12 +27,44 @@
 			list-style-type: none;
 		}
 		.recentcomments:before {
-		font-family: 'FontAwesome';
-		content: '\f067';
-		margin: 0 1rem 0 0;
-		color: #FFF;
-	}	
-	}	
+			font-family: 'FontAwesome';
+			content: '\f067';
+			margin: 0 1rem 0 0;
+			color: #FFF;
+		}	
+	}
+
+	.widget_recent_entries {
+		
+		h3{
+			color:#fff;
+			border-bottom: 0;
+			font-size: 2.4rem;
+			font-weight: 700;
+			margin-bottom: 2rem;
+			margin-top: .2rem;
+		}
+			li {
+				color:#fff;
+				list-style-type: none;
+			}
+		
+	}
+	.widget_recent_entries li:before {
+			font-family: 'FontAwesome';
+			content: '\f067';
+			margin: 0 1rem 0 0;
+			color: #FFF;
+		}
+
+	.footer-widget-title{
+		color:#fff;
+		border-bottom: 0;
+		font-size: 2.4rem;
+		font-weight: 700;
+		margin-bottom: 2rem;
+		margin-top: .2rem;
+	}			
 	
 }
 

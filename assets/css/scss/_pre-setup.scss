@@ -591,6 +591,18 @@ input, textarea, select, fieldset {
     visibility: hidden;
 }
 
+.one-third {
+    width: 33%;
+    margin-right: .33%;
+    float: left;
+}
+
+.one-fourth {
+    width: 23%;
+    margin-right: 1.33%;
+    float: left;
+}
+
 /**
  * 
  * #.# Media Queries
