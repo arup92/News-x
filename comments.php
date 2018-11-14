@@ -23,16 +23,16 @@ if ( post_password_required() ) {
 				$comments_number = get_comments_number();
 				if ( $comments_number === '1' ) {
 					/* translators: %s: post title */
-					printf( esc_html__( 'One Comment', 'writer-blog' ), get_the_title() );
+					printf( esc_html__( 'One Comment', 'news-x' ), get_the_title() );
 				} else {
 					printf(
 						/* translators: 1: number of comments, 2: post title */
 						esc_html(
-							'%1$s Comment',
+							'%1$s Comments',
 							'%1$s Comments',
 							$comments_number,
 							'comments title',
-							'writer-blog'
+							'news-x'
 						),
 						esc_html( number_format_i18n( $comments_number ) ),
 						get_the_title()
