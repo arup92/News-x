@@ -26,12 +26,54 @@ function news_x_brand_setup( $wp_customize ) {
 
 add_action( 'customize_register', 'news_x_brand_setup');
 
-
 	/*************************************************************************************************************************
-	 * Add top-bar section.
+	 * Add footer copyright section.
 	 ************************************************************************************************************************/
 
 function news_x_topbar_setup( $wp_customize ) {
+	$wp_customize->add_section( 'news_x_top_bar_setup_section', array(
+		'title'		=>	'Topbar Settings',
+	) );
+
+	/******************************** Enable/disable bottom bar copyright section *****************************/
+	$wp_customize->add_setting( 'news_x_top_bar_display_setting', array(
+		'default'	=>	'yes',
+		//'sanitize_callback' => 'writer_blog_sanitize_select',
+	) );
+
+	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'news_x_top_bar_display_control', array(
+		'label'		=>	__( 'Enable Topbar section?', 'news-x' ),
+		'section'	=>	'news_x_top_bar_setup_section',
+		'settings'	=>	'news_x_top_bar_display_setting',
+		'type'		=>	'select',
+		'choices'	=>	array(
+							'yes'	=>	'Yes',
+							'no'	=>	'No',
+						),
+	) ) );
+
+	/******************************** Display bottom bar copyright text *****************************/
+	$wp_customize->add_setting( 'news_x_top_bar_text_setting', array(
+		'default'	=>	'Copyright. All Rights Reserved.',
+		//'sanitize_callback' => 'sanitize_textarea_field',
+	) );
+
+	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'news-x-top-bar-text-control', array(
+		'label'		=>	__( 'Topbar Text', 'news-x' ),
+		'type'		=>	'text',
+		'section'	=>	'news_x_top_bar_setup_section',
+		'settings'	=>	'news_x_top_bar_text_setting',
+	) ) );
+}
+
+add_action( 'customize_register', 'news_x_topbar_setup');
+
+
+	/*************************************************************************************************************************
+	 * Add social-link section.
+	 ************************************************************************************************************************/
+
+function news_x_sociallink_setup( $wp_customize ) {
 	$wp_customize->add_section( 'news_x_social_links_setup_section', array(
 		'title'		=>	'Social Links',
 	) );
@@ -115,7 +157,7 @@ function news_x_topbar_setup( $wp_customize ) {
 
 }
 
-add_action( 'customize_register', 'news_x_topbar_setup');
+add_action( 'customize_register', 'news_x_sociallink_setup');
 
 /*************************************************************************************************************************
  * Add homepage customization section on the theme customizer.

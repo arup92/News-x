@@ -2,7 +2,7 @@
 	<div class="container">
 		<div class="row vartical-align">
 			<div class="five columns">
-				<?php if ( get_theme_mod( 'news_x_footer_copyright_display_setting', 'yes' ) == 'yes' ) { ?>
+				<?php if ( get_theme_mod( 'news-x-top-bar-section-control', 'yes' ) == 'yes' ) { ?>
 				<div class="right-side-cp-text">
 					<p><?php echo esc_html( get_theme_mod( 'news_x_footer_copyright_text_setting', 'Copyright. All Rights Reserved.
 

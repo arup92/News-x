@@ -12,35 +12,28 @@
 		color:#fff;
 		padding: 1.6rem 0;
 	}
-	.recent-posts{
+	.widget_recent_comments{
 		
-		h5{
+		h3{
 			color:#fff;
 			border-bottom: 0;
 			font-size: 2.4rem;
 			font-weight: 700;
-			margin-bottom: 2.6rem;
+			margin-bottom: 2rem;
 			margin-top: .2rem;
 		}
-		h2{
+		.recentcomments{
 			color:#fff;
+			list-style-type: none;
 		}
-		
-	}
-	.pupolar-posts{
-		
-		h5{
-			color:#fff;
-			border-bottom: 0;
-			font-size: 2.4rem;
-			font-weight: 700;
-			margin-bottom: 2.6rem;
-			margin-top: .2rem;
-		}
-		h2{
-			color:#fff;
-		}
+		.recentcomments:before {
+		font-family: 'FontAwesome';
+		content: '\f067';
+		margin: 0 1rem 0 0;
+		color: #FFF;
 	}	
+	}	
+	
 }
 
 .buttom-bar {
