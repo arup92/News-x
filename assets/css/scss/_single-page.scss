@@ -106,3 +106,50 @@ label {
 		float: left;
 	}
 }
+
+.pagination-nav {
+	margin-top: 1.6rem;
+	margin-bottom: 1.6rem;
+	
+	a {
+		color: $dark-color;
+		font-size: 1.8rem;
+		font-weight: 700;
+	}
+
+	.nav-prev {
+		float: left;
+
+		&:before {
+			content: '\f104';
+			color: $dark-color;
+			font: normal normal 700 22px/1 FontAwesome;
+			margin-right: 1rem;
+		}
+	}
+
+	.nav-next {
+		float: right;
+
+		&:after {
+			content: '\f105';
+			color: $dark-color;
+			font: normal normal 700 22px/1 FontAwesome;
+			margin-left: 1rem;
+		}
+	}
+
+	.right-nav {
+		display: flex;
+		align-items: center;
+
+		.right {
+			text-align: right;
+		}
+	}
+
+	.left-nav {
+		display: flex;
+		align-items: center;
+	}
+}

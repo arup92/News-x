@@ -1197,6 +1197,45 @@ label {
   float: left;
 }
 
+.pagination-nav {
+  margin-top: 1.6rem;
+  margin-bottom: 1.6rem;
+}
+.pagination-nav a {
+  color: #404040;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+.pagination-nav .nav-prev {
+  float: left;
+}
+.pagination-nav .nav-prev:before {
+  content: '\f104';
+  color: #404040;
+  font: normal normal 700 22px/1 FontAwesome;
+  margin-right: 1rem;
+}
+.pagination-nav .nav-next {
+  float: right;
+}
+.pagination-nav .nav-next:after {
+  content: '\f105';
+  color: #404040;
+  font: normal normal 700 22px/1 FontAwesome;
+  margin-left: 1rem;
+}
+.pagination-nav .right-nav {
+  display: flex;
+  align-items: center;
+}
+.pagination-nav .right-nav .right {
+  text-align: right;
+}
+.pagination-nav .left-nav {
+  display: flex;
+  align-items: center;
+}
+
 /**
  * 
  * #.# Comments Template

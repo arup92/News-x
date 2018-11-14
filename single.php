@@ -39,37 +39,34 @@ if ( have_posts() ) :
 						</div><!-- /.comment-wrapper -->
 					</div><!-- /.author-info -->
 				</div><!-- /.single-post-text -->	
+
+				<div class="pagination-nav row">
+					<div class="six columns left-nav">
+						<div class="nav-prev"></div><!-- /.nav-prev -->
+						<?php $prev_post = get_adjacent_post( false, '', false ); ?>
+							<?php if ( is_a( $prev_post, 'WP_Post' ) ) { ?>
+							<a href="<?php echo esc_url( get_permalink( get_adjacent_post( false, '', false)->ID ) ); ?>" class="btn prev"><?php echo esc_html( get_the_title( get_adjacent_post( false, '', false)->ID ) ); ?></a>
+						<?php } ?>
+					</div><!-- /.six columns -->
+
+					<div class="six columns right-nav">
+					<?php $next_post = get_adjacent_post( false, '', true ); ?>
+						<?php if ( is_a( $next_post, 'WP_Post' ) ) { ?>
+						<a href="<?php echo esc_url( get_permalink( get_adjacent_post( false, '', true)->ID ) ); ?>" class="btn next right"><?php echo esc_html( get_the_title( get_adjacent_post( false, '', true)->ID ) ); ?></a>
+					<?php } ?>
+					<div class="nav-next"></div><!-- /.nav-prev -->
+					</div><!-- /.six columns -->
+				</div><!-- /.pagination-nav -->
+
+			<?php comments_template();?>
 			</div><!-- /.row .eight columns -->
 				<?php get_sidebar(); ?>
 		</div><!-- /.row -->	
 	</div><!-- /.container -->
-	<div class="container pagination-single">
-		<div class="eight columns">
-			<div class="pagination-nav">
-				<?php $prev_post = get_adjacent_post( false, '', false ); ?>
-					<?php if ( is_a( $prev_post, 'WP_Post' ) ) { ?>
-					<a href="<?php echo esc_url( get_permalink( get_adjacent_post( false, '', false)->ID ) ); ?>" class="btn prev"><?php echo esc_html( get_the_title( get_adjacent_post( false, '', false)->ID ) ); ?></a>
-				<?php } ?>
-
-				<?php $next_post = get_adjacent_post( false, '', true ); ?>
-					<?php if ( is_a( $next_post, 'WP_Post' ) ) { ?>
-					<a href="<?php echo esc_url( get_permalink( get_adjacent_post( false, '', true)->ID ) ); ?>" class="btn next"><?php echo esc_html( get_the_title( get_adjacent_post( false, '', true)->ID ) ); ?></a>
-				<?php } ?>
-			</div><!-- /.pagination-nav -->
-		</div><!-- /.eightcolumn -->
-	</div><!-- /.pagination-single-->
 
 <?php 
 	endwhile;
 	endif;
 	wp_reset_postdata();
-?>
-	<div class="container comment-section">
-		<div class="row">
-			<div class="eight columns">
-				<?php comments_template();?>
-			</div><!-- /.row .eight columns -->
-		</div><!-- /.row -->	
-	</div><!-- /.container -->
-<?php
+
 get_footer();
