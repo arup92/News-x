@@ -1227,6 +1227,7 @@ label {
 .pagination-nav .right-nav {
   display: flex;
   align-items: center;
+  justify-content: flex-end;
 }
 .pagination-nav .right-nav .right {
   text-align: right;
