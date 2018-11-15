@@ -42,15 +42,10 @@
 							?>
 		                </div> <!-- /.eight /.columns -->
 		                <div class="three columns">
-		                	<div class="search-wrap">
-								<div class="search">
-									<input type="text" class="searchTerm" placeholder="What are you looking for?">
-									<button type="submit" class="searchButton">
-										<i class="fa fa-search"></i>
-									</button><!-- /button -->
-								</div><!-- /.search -->
-							</div><!-- /.search-wrap -->
-		                </div><!-- /.four columns -->
+							<div class="search-wrap">
+		                		<?php get_search_form(); ?>
+		                	</div><!-- /.search-wrap -->
+						</div><!-- /.three columns -->
 		            </div><!-- /.row /.vertical-align -->
 		        </div><!-- /.container -->
 			</div><!-- /.u-full-width /.nav-manu -->
