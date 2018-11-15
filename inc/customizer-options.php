@@ -11,15 +11,15 @@ function news_x_brand_setup( $wp_customize ) {
 
 	// Upload logo for default header
 
-	$wp_customize->add_setting( 'newsx-default-logo-setting', array(
-		'sanitize_callback'	=>	'newsx_sanitize_image',
+	$wp_customize->add_setting( 'news_x_default_logo_setting', array(
+		'sanitize_callback'	=>	'news_x_sanitize_image',
 	) );
 
 	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'news_x_default_logo_control', array(
 		'label'			=>	__( 'Upload logo for default header', 'news-x' ),
 		'description'	=>	__( 'Upload dark version of your logo. 150x40px is preferred.', 'news-x' ),
-		'section'		=>	'newsx-brand-setup-section',
-		'settings'		=>	'newsx-default-logo-setting',
+		'section'		=>	'news_x_brand_setup_section',
+		'settings'		=>	'news_x_default_logo_setting',
 	) ) );
 
 }
@@ -573,7 +573,7 @@ add_action( 'customize_register', 'news_x_footer_copyright_setup');
  * @uses	theme_slug_validate_image()		
  * @uses	esc_url_raw()				http://codex.wordpress.org/Function_Reference/esc_url_raw
  */
-function newsx_sanitize_image( $input, $setting ) {
+function news_x_sanitize_image( $input, $setting ) {
 	return esc_url_raw( newsx_validate_image( $input, $setting->default ) );
 }
 

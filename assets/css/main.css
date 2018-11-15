@@ -1012,6 +1012,25 @@ input, textarea, select, fieldset {
   height: auto;
 }
 
+.masonry {
+  margin: 2.4rem 0;
+  -webkit-column-count: 3;
+  -moz-column-count: 3;
+  column-count: 3;
+  -webkit-column-gap: 1em;
+  -moz-column-gap: 1em;
+  column-gap: 1em;
+  padding: 0;
+  -moz-column-gap: 1.5em;
+  -webkit-column-gap: 1.5em;
+  column-gap: 1.5em;
+}
+.masonry .cols {
+  display: inline-block;
+  padding: 1rem;
+  margin-bottom: 1.6rem;
+}
+
 /**
  * --------------------------------------------------------------------------------
  * Footer & Buttom-Bar style
