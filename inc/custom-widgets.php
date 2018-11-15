@@ -11,6 +11,16 @@ if ( ! function_exists( 'ct_widgets_init' ) ) :
 
 function ct_widgets_init() {
 	register_sidebar( array(
+		'name'          => __( 'Header Ad Section', 'news-x' ),
+		'id'            => 'news-x-header-ad-right',
+		'description'   => __( 'Add widgets here to appear on your post page sidebar section.', 'news-x' ),
+		'before_widget' => '<div id="%1$s" class="%2$s vartical-align header-main">',
+		'after_widget'  => '</div><!-- /.four columns -->',
+		'before_title'  => '<h3 class="footer-widget-title">',
+		'after_title'   => '</h3>',
+	) );
+
+	register_sidebar( array(
 		'name'          => __( 'Sidebar For Single Post', 'news-x' ),
 		'id'            => 'news-x-single-post-right',
 		'description'   => __( 'Add widgets here to appear on your post page sidebar section.', 'news-x' ),

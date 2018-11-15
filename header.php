@@ -21,7 +21,7 @@
 						</div><!-- /.six ./columns -->
 						<div class="six columns ">
 							<div class="right-side-ad vartical-align">
-									<img src="img/ad-banner.jpg" alt="ad banner">
+									<?php dynamic_sidebar( 'news-x-header-ad-right' ); ?>
 							</div><!-- /.right-side-ad ./vartical-align -->
 						</div><!-- /.six ./columns -->
 					</div><!-- /.row /.vartical-align /.header-main -->
