@@ -16,10 +16,10 @@
 			<div class="u-full-width header">
 				<div class="container">
 					<div class="row vartical-align header-main">
-						<div class="six columns">
+						<div class="four columns">
 								 <?php get_template_part( 'template-parts/header/site', 'branding' ); ?>
 						</div><!-- /.six ./columns -->
-						<div class="six columns ">
+						<div class="eight columns ">
 							<div class="right-side-ad vartical-align">
 									<?php dynamic_sidebar( 'news-x-header-ad-right' ); ?>
 							</div><!-- /.right-side-ad ./vartical-align -->

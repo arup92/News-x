@@ -6,7 +6,7 @@
 function news_x_brand_setup( $wp_customize ) {
 	$wp_customize->add_section( 'news_x_brand_setup_section', array(
 		'title'		=>	'Branding',
-		'priority'	=>	20,
+		'priority'	=>	50,
 	) );
 
 	// Upload logo for default header
