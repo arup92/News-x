@@ -525,6 +525,33 @@ input, textarea, select, fieldset {
   float: left;
 }
 
+.searchButton {
+  position: absolute;
+  right: 20px;
+  width: 34px;
+  height: 31px;
+  border: 1px solid mediumturquoise;
+  background: mediumturquoise;
+  text-align: center;
+  color: #fff;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.searchTerm {
+  float: left;
+  width: 80%;
+  border: 2px solid mediumturquoise;
+  padding: 4px;
+  height: 31px;
+  border-radius: 5px;
+  outline: none;
+  color: #9DBFAF;
+  margin-bottom: 0;
+}
+
 /**
  * 
  * #.# Media Queries

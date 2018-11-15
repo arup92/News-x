@@ -16,10 +16,10 @@
 			<div class="u-full-width header">
 				<div class="container">
 					<div class="row vartical-align header-main">
-						<div class="four columns">
+						<div class="five columns">
 								 <?php get_template_part( 'template-parts/header/site', 'branding' ); ?>
 						</div><!-- /.six ./columns -->
-						<div class="eight columns ">
+						<div class="seven columns ">
 							<div class="right-side-ad vartical-align">
 									<?php dynamic_sidebar( 'news-x-header-ad-right' ); ?>
 							</div><!-- /.right-side-ad ./vartical-align -->
@@ -31,7 +31,7 @@
 			<div class="u-full-width nav-manu">
 				<div class="container">
 		            <div class="row vertical-align">	
-		                <div class="twelve columns">
+		                <div class="nine columns">
 			                <?php
 			                	wp_nav_menu( array( 
 									'theme_location' => 'header_menu',
@@ -40,7 +40,17 @@
 									'depth' => '3'
 								) );
 							?>
-		                </div> <!-- /.twelve /.columns -->
+		                </div> <!-- /.eight /.columns -->
+		                <div class="three columns">
+		                	<div class="search-wrap">
+								<div class="search">
+									<input type="text" class="searchTerm" placeholder="What are you looking for?">
+									<button type="submit" class="searchButton">
+										<i class="fa fa-search"></i>
+									</button><!-- /button -->
+								</div><!-- /.search -->
+							</div><!-- /.search-wrap -->
+		                </div><!-- /.four columns -->
 		            </div><!-- /.row /.vertical-align -->
 		        </div><!-- /.container -->
 			</div><!-- /.u-full-width /.nav-manu -->
