@@ -10,12 +10,12 @@ get_header();
 
     <!-- /.section-title-red -->
     <div class="row">
-    	<div class="eight columns">
+    	<div class="eight columns masonry">
         <?php
 		if ( have_posts() ) :
 			while ( have_posts() ) : the_post();
 		?>
-		<div class="one-third block shadow">
+		<div class="cols shadow">
             <div class="fullwidth-post-section">
                 <?php
                 	if ( has_post_thumbnail() ):
