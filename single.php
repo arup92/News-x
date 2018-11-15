@@ -6,7 +6,7 @@ if ( have_posts() ) :
 ?>
 	<div id="post-<?php the_ID(); ?>" <?php post_class( 'container' ); ?>>
 		<div class="twelve columns">
-			<div class="single-post-h">
+			<div class="single-post-heading">
 				<?php the_title( '<h1>', '</h1>' ); ?>
 			</div><!-- /.single-post-h -->	
 		</div><!-- /.twelve columns -->
@@ -14,31 +14,33 @@ if ( have_posts() ) :
 	<div class="container">
 		<div class="row">
 			<div class="eight columns">
+				<div class="shadow">
 					<?php if ( has_post_thumbnail() ) : ?>
-						<div class="single-post-h">
+						<div class="single-post-image">
 							<img src="<?php echo esc_url( the_post_thumbnail_url( 'full' ) ); ?>" class="full-image" alt="image" />
-						</div><!-- /.single-post-h -->
+						</div><!-- /.single-post-image -->
 					<?php endif; ?>
-				<div class="single-post-text">
-					<?php echo the_content(); ?>
+					<div class="single-post-text">
+						<?php echo the_content(); ?>
 
-					<div class="author-info">
-						<div class="author-image clearfix">
-				  			<a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ), get_the_author_meta( 'user_nicename' ) ) ); ?>"><?php echo get_avatar( get_the_author_meta('ID') ); ?></a>
-						</div><!-- /.author-image -->
-						<div class="comment-wrapper">
-								<b class="comment-name"><?php esc_html_e( 'Published By', 'writer-blog' );?> <a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ), get_the_author_meta( 'user_nicename' ) ) ); ?>"><?php the_author(); ?></a></b>
-								<?php if ( get_the_author_meta( 'description' ) ): ?>
-									<p><?php the_author_meta( 'description' ); ?></p>
-								<?php endif ?>
-							<div class="author-link">
-								<?php if ( get_the_author_meta( 'user_url' ) ): ?>
-									<a href="<?php the_author_meta( 'user_url' ); ?>"><?php esc_html_e( 'Visit Website', 'writer-blog' );?></a>
-								<?php endif ?>
-							</div><!-- /.author-link -->
-						</div><!-- /.comment-wrapper -->
-					</div><!-- /.author-info -->
-				</div><!-- /.single-post-text -->	
+						<div class="author-info">
+							<div class="author-image clearfix">
+					  			<a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ), get_the_author_meta( 'user_nicename' ) ) ); ?>"><?php echo get_avatar( get_the_author_meta('ID') ); ?></a>
+							</div><!-- /.author-image -->
+							<div class="comment-wrapper">
+									<b class="comment-name"><?php esc_html_e( 'Published By', 'writer-blog' );?> <a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ), get_the_author_meta( 'user_nicename' ) ) ); ?>"><?php the_author(); ?></a></b>
+									<?php if ( get_the_author_meta( 'description' ) ): ?>
+										<p><?php the_author_meta( 'description' ); ?></p>
+									<?php endif ?>
+								<div class="author-link">
+									<?php if ( get_the_author_meta( 'user_url' ) ): ?>
+										<a href="<?php the_author_meta( 'user_url' ); ?>"><?php esc_html_e( 'Visit Website', 'writer-blog' );?></a>
+									<?php endif ?>
+								</div><!-- /.author-link -->
+							</div><!-- /.comment-wrapper -->
+						</div><!-- /.author-info -->
+					</div><!-- /.single-post-text -->
+				</div><!-- /.shadow -->
 
 				<div class="pagination-nav row">
 					<div class="six columns left-nav">
@@ -58,7 +60,9 @@ if ( have_posts() ) :
 					</div><!-- /.six columns -->
 				</div><!-- /.pagination-nav -->
 
-			<?php comments_template();?>
+				<div class="shadow">
+					<?php comments_template();?>
+				</div><!-- /.shadow -->
 			</div><!-- /.row .eight columns -->
 				<?php get_sidebar(); ?>
 		</div><!-- /.row -->	

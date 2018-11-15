@@ -63,11 +63,19 @@
 				content: "\f105";
 			}
 		}
-		
 	}
 
 	.textwidget img {
 		width: 100%;
 		height: auto;
+	}
+}
+
+.searchform {
+	margin-bottom: 0;
+
+	#searchsubmit {
+		margin-bottom: 0;
+		padding: .5rem 0;
 	}
 }
