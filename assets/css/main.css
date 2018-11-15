@@ -370,7 +370,7 @@ a, a:hover, a:focus {
 
 .main-nav > .current_page_item a::before {
   opacity: 1;
-  bottom: -10px;
+  bottom: -4px;
 }
 
 /* Mobile Navigation Menu */
@@ -1012,6 +1012,14 @@ input, textarea, select, fieldset {
   height: auto;
 }
 
+.searchform {
+  margin-bottom: 0;
+}
+.searchform #searchsubmit {
+  margin-bottom: 0;
+  padding: .5rem 0;
+}
+
 .masonry {
   margin: 2.4rem 0;
   -webkit-column-count: 3;
@@ -1029,6 +1037,7 @@ input, textarea, select, fieldset {
   display: inline-block;
   padding: 1rem;
   margin-bottom: 1.6rem;
+  background-color: white;
 }
 
 /**
@@ -1120,6 +1129,10 @@ input, textarea, select, fieldset {
  * single page style 
  * --------------------------------------------------------------------------------
 */
+.single-post-heading {
+  margin-top: 2rem;
+}
+
 .single-post-text {
   background-color: #fff;
   padding: 2.6rem;
@@ -1159,7 +1172,7 @@ label {
 }
 
 .submit > button {
-  margin-top: 1rem;
+  margin: 0;
   text-transform: uppercase;
   padding: 0 2rem;
   height: 4.5rem;
@@ -1261,6 +1274,14 @@ label {
  * #.# Comments Template
  * 
  */
+#commentform {
+  margin-bottom: 0;
+}
+
+.form-submit {
+  margin-bottom: 0;
+}
+
 .comments-on:before {
   content: "\f0e6";
   font: normal 400 normal 1.8rem/1 FontAwesome;
