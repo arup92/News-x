@@ -43,7 +43,7 @@
 		                </div> <!-- /.eight /.columns -->
 		                <div class="three columns">
 							<div class="search-wrap">
-		                		<?php get_search_form(); ?>
+		                		<?php get_template_part( 'template-parts/header/search', 'form' ); ?>
 		                	</div><!-- /.search-wrap -->
 						</div><!-- /.three columns -->
 		            </div><!-- /.row /.vertical-align -->
