@@ -9,7 +9,7 @@ register_nav_menus( array (
 /*
  * Make theme available for translation.
  */
-load_theme_textdomain( 'writer-blog' );
+load_theme_textdomain( 'news-x' );
 
 /**
  * Adds theme support for featured image

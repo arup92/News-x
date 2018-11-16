@@ -11,9 +11,9 @@ get_header(); ?>
 			<div class="page-header">
 				<?php if ( have_posts() ) : ?>
 					<?php /* translators: %s: search term */ ?>
-					<h1 class="page-title"><?php printf( esc_html__( 'Search Results for: %s', 'writer-blog' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+					<h1 class="page-title"><?php printf( esc_html__( 'Search Results for: %s', 'news-x' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
 				<?php else : ?>
-					<h1 class="page-title"><?php esc_html_e( 'Nothing Found', 'writer-blog' ); ?></h1>
+					<h1 class="page-title"><?php esc_html_e( 'Nothing Found', 'news-x' ); ?></h1>
 				<?php endif; ?>
 			</div><!-- .page-header -->
 
@@ -29,8 +29,8 @@ get_header(); ?>
 
 					the_posts_pagination( array(
 						'mid_size'  => 2,
-						'prev_text' => __( '&nbsp;', 'writer-blog' ),
-						'next_text' => __( '&nbsp;', 'writer-blog' ),
+						'prev_text' => __( '&nbsp;', 'news-x' ),
+						'next_text' => __( '&nbsp;', 'news-x' ),
 					) );
 
 				else :
@@ -38,7 +38,7 @@ get_header(); ?>
 			?>	
 					<div class="block">
 						<div class="sub-block">
-							<p><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'writer-blog' ); ?></p>
+							<p><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'news-x' ); ?></p>
 							<?php get_search_form(); ?>
 						</div><!-- /.sub-block -->
 					</div><!-- /.block -->

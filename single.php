@@ -28,13 +28,13 @@ if ( have_posts() ) :
 					  			<a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ), get_the_author_meta( 'user_nicename' ) ) ); ?>"><?php echo get_avatar( get_the_author_meta('ID') ); ?></a>
 							</div><!-- /.author-image -->
 							<div class="comment-wrapper">
-									<b class="comment-name"><?php esc_html_e( 'Published By', 'writer-blog' );?> <a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ), get_the_author_meta( 'user_nicename' ) ) ); ?>"><?php the_author(); ?></a></b>
+									<b class="comment-name"><?php esc_html_e( 'Published By', 'news-x' );?> <a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ), get_the_author_meta( 'user_nicename' ) ) ); ?>"><?php the_author(); ?></a></b>
 									<?php if ( get_the_author_meta( 'description' ) ): ?>
 										<p><?php the_author_meta( 'description' ); ?></p>
 									<?php endif ?>
 								<div class="author-link">
 									<?php if ( get_the_author_meta( 'user_url' ) ): ?>
-										<a href="<?php the_author_meta( 'user_url' ); ?>"><?php esc_html_e( 'Visit Website', 'writer-blog' );?></a>
+										<a href="<?php the_author_meta( 'user_url' ); ?>"><?php esc_html_e( 'Visit Website', 'news-x' );?></a>
 									<?php endif ?>
 								</div><!-- /.author-link -->
 							</div><!-- /.comment-wrapper -->

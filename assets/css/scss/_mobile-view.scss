@@ -30,3 +30,45 @@
 	}
 }
 
+@media (max-width: 768px) {
+
+    .fullwidth-sections {
+        width: 100%;
+    }
+    .section-one {
+        .x-large {
+            width: 100%;
+            height: auto;
+        }
+    }
+    .section-one { 
+
+        .medium-post-section {
+            width: 100%;
+        }
+    }
+
+    .big-category-section {
+        width: 100%;
+    }
+
+    .list-type-categories {
+        width: 100%;
+        margin: 10px 0px 10px 0px;
+    }
+    .single-post-category {
+
+        width: 100%;
+    }
+}
+
+/* media query for single page*/
+@media (max-width: 768px) {
+
+    .eight.columns {
+
+        width: 100%;
+    }   
+}
+
+

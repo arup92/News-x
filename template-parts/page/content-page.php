@@ -24,7 +24,7 @@
 
 				wp_link_pages(
 					array(
-						'before'      => '<div class="link-pages">' . __( 'Continue Reading:', 'writer-blog' ),
+						'before'      => '<div class="link-pages">' . __( 'Continue Reading:', 'news-x' ),
 						'after'       => '</div>',
 						'link_before' => '<span class="page-numbers">',
 						'link_after'  => '</span>',

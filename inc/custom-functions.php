@@ -8,9 +8,9 @@
  * transparency is selected under customizer
  */
 
-if ( ! function_exists( 'writer_blog_header_transparency' ) ) :
+if ( ! function_exists( 'news_x_header_transparency' ) ) :
 
-function writer_blog_header_transparency() {
+function news_x_header_transparency() {
 	if ( is_home() ) {
 
 		if ( get_theme_mod( 'ct-homepage-transparent-setting', 'yes' ) == 'yes' ) {
@@ -37,9 +37,9 @@ endif;
  * as default featured image
  */
 
-if ( ! function_exists( 'writer_blog_default_featured_image' ) ) :
+if ( ! function_exists( 'news_x_default_featured_image' ) ) :
 
-function writer_blog_default_featured_image() {
+function news_x_default_featured_image() {
 
 	if ( get_theme_mod( 'ct-default-featured-setting' ) ) {
 		return get_theme_mod( 'ct-default-featured-setting' );
@@ -56,9 +56,9 @@ endif;
  * header is transparent
  */
 
-if ( ! function_exists( 'writer_blog_logo_switch' ) ) :
+if ( ! function_exists( 'news_x_logo_switch' ) ) :
 
-function writer_blog_logo_switch( $value ) {
+function news_x_logo_switch( $value ) {
 	$main_logo_image;
 
 	if ( $value == 'home-header' ) {
@@ -78,10 +78,10 @@ endif;
  * transparent header
  */
 
-if ( ! function_exists( 'writer_blog_mobile_menu_icon_color_switch' ) ) :
+if ( ! function_exists( 'news_x_mobile_menu_icon_color_switch' ) ) :
 
-function writer_blog_mobile_menu_icon_color_switch() {
-	if ( writer_blog_header_transparency() == "home-header" ) {
+function news_x_mobile_menu_icon_color_switch() {
+	if ( news_x_header_transparency() == "home-header" ) {
 		return 'white';
 	}
 
@@ -95,7 +95,7 @@ endif;
  * that has a sub menu on the mobile menu.
  */
 
-class writer_blog_dropdown_toggle_walker_nav_menu extends Walker_Nav_Menu {
+class news_x_dropdown_toggle_walker_nav_menu extends Walker_Nav_Menu {
     function start_lvl( &$output, $depth = 0, $args = array() ) {
         $indent = str_repeat( "\t", $depth );
         if( 'mobile_menu' == $args->theme_location ) {
@@ -112,9 +112,9 @@ class writer_blog_dropdown_toggle_walker_nav_menu extends Walker_Nav_Menu {
  * set, it takes the theme default featured image.
  */
 
-if ( ! function_exists( 'writer_blog_owl_carousal_slider_image' ) ) :
+if ( ! function_exists( 'news_x_owl_carousal_slider_image' ) ) :
 
-function writer_blog_owl_carousal_slider_image() {
+function news_x_owl_carousal_slider_image() {
 	
   if ( get_theme_mod( 'ct-default-slider-bg-setting', 'post' ) == 'post' ) {
 
@@ -153,16 +153,16 @@ endif;
  * Displays Breadcrumb on post/pages
  */
 
-if ( ! function_exists( 'writer_blog_the_breadcrumb' ) ) :
+if ( ! function_exists( 'news_x_the_breadcrumb' ) ) :
 
-function writer_blog_the_breadcrumb() {
+function news_x_the_breadcrumb() {
     $sep = ' <span class="fa fa-angle-double-right"></span> ';
     if ( !is_front_page() ) {
 
 	// Start the breadcrumb with a link to your homepage
         echo '<div class="container"><div class="breadcrumb clearfix"><span class="fa fa-home"></span>';
         echo '<a href="' . esc_url( home_url() ) . '">';
-        echo esc_html__( 'Home', 'writer-blog' );
+        echo esc_html__( 'Home', 'news_x' );
         echo '</a>' . $sep;
 
 	// Check if the current page is a category, an archive or a single page. If so show the category or archive name.
@@ -176,7 +176,7 @@ function writer_blog_the_breadcrumb() {
             } elseif ( is_year() ) {
                 echo get_the_date( 'Y' );
             } else {
-                esc_html__( 'Blog Archives', 'writer-blog' );
+                esc_html__( 'Blog Archives', 'news_x' );
             }
         }
 
@@ -203,9 +203,9 @@ endif;
 /**
  * Plugin class
  **/
-if ( ! class_exists( 'Writer_Blog_Tax_Meta' ) ) {
+if ( ! class_exists( 'news_x_Tax_Meta' ) ) {
 
-class Writer_Blog_Tax_Meta {
+class news_x_Tax_Meta {
 
   public function __construct() {
     //
@@ -234,12 +234,12 @@ public function load_media() {
  */
  public function add_category_image ( $taxonomy ) { ?>
    <div class="form-field term-group">
-     <label for="category-image-id"><?php esc_html_e('Image', 'writer-blog'); ?></label>
+     <label for="category-image-id"><?php esc_html_e('Image', 'news_x'); ?></label>
      <input type="hidden" id="category-image-id" name="category-image-id" class="custom_media_url" value="">
      <div id="category-image-wrapper"></div>
      <p>
-       <input type="button" class="button button-secondary writer_blog_tax_media_button" id="writer_blog_tax_media_button" name="writer_blog_tax_media_button" value="<?php esc_html_e( 'Add Image', 'writer-blog' ); ?>" />
-       <input type="button" class="button button-secondary writer_blog_tax_media_remove" id="writer_blog_tax_media_remove" name="writer_blog_tax_media_remove" value="<?php esc_html_e( 'Remove Image', 'writer-blog' ); ?>" />
+       <input type="button" class="button button-secondary news_x_tax_media_button" id="news_x_tax_media_button" name="news_x_tax_media_button" value="<?php esc_html_e( 'Add Image', 'news-x' ); ?>" />
+       <input type="button" class="button button-secondary news_x_tax_media_remove" id="news_x_tax_media_remove" name="news_x_tax_media_remove" value="<?php esc_html_e( 'Remove Image', 'news-x' ); ?>" />
     </p>
    </div>
  <?php
@@ -263,7 +263,7 @@ public function load_media() {
  public function update_category_image ( $term, $taxonomy ) { ?>
    <tr class="form-field term-group-wrap">
      <th scope="row">
-       <label for="category-image-id"><?php esc_html_e( 'Image', 'writer-blog' ); ?></label>
+       <label for="category-image-id"><?php esc_html_e( 'Image', 'news-x' ); ?></label>
      </th>
      <td>
        <?php $image_id = get_term_meta ( $term -> term_id, 'category-image-id', true ); ?>
@@ -274,8 +274,8 @@ public function load_media() {
          <?php } ?>
        </div>
        <p>
-         <input type="button" class="button button-secondary writer_blog_tax_media_button" id="writer_blog_tax_media_button" name="writer_blog_tax_media_button" value="<?php esc_html_e( 'Add Image', 'writer-blog' ); ?>" />
-         <input type="button" class="button button-secondary writer_blog_tax_media_remove" id="writer_blog_tax_media_remove" name="writer_blog_tax_media_remove" value="<?php esc_html_e( 'Remove Image', 'writer-blog' ); ?>" />
+         <input type="button" class="button button-secondary news_x_tax_media_button" id="news_x_tax_media_button" name="news_x_tax_media_button" value="<?php esc_html_e( 'Add Image', 'news-x' ); ?>" />
+         <input type="button" class="button button-secondary news_x_tax_media_remove" id="news_x_tax_media_remove" name="news_x_tax_media_remove" value="<?php esc_html_e( 'Remove Image', 'news-x' ); ?>" />
        </p>
      </td>
    </tr>
@@ -302,7 +302,7 @@ public function load_media() {
  public function add_script() { ?>
    <script>
      jQuery(document).ready( function($) {
-       function writer_blog_media_upload(button_class) {
+       function news_x_media_upload(button_class) {
          var _custom_media = true,
          _orig_send_attachment = wp.media.editor.send.attachment;
          $('body').on('click', button_class, function(e) {
@@ -323,8 +323,8 @@ public function load_media() {
          return false;
        });
      }
-     writer_blog_media_upload('.writer_blog_tax_media_button.button'); 
-     $('body').on('click','.writer_blog_tax_media_remove',function(){
+     news_x_media_upload('.news_x_tax_media_button.button'); 
+     $('body').on('click','.news_x_tax_media_remove',function(){
        $('#category-image-id').val('');
        $('#category-image-wrapper').html('<img class="custom_media_image" src="" style="margin:0;padding:0;max-height:100px;float:none;" />');
      });
@@ -346,7 +346,7 @@ public function load_media() {
 
   }
  
-$WRITER_BLOG_TAX_META = new Writer_Blog_Tax_Meta();
+$WRITER_BLOG_TAX_META = new news_x_Tax_Meta();
 $WRITER_BLOG_TAX_META -> init();
  
 }
@@ -355,9 +355,9 @@ $WRITER_BLOG_TAX_META -> init();
  * Displays Category image
  */
 
-if ( ! function_exists( 'writer_blog_category_image' ) ) :
+if ( ! function_exists( 'news_x_category_image' ) ) :
 
-function writer_blog_category_image() {
+function news_x_category_image() {
 	// Get the current category ID, e.g. if we're on a category archive page
 	$category = get_category( get_query_var( 'cat' ) );
 	$cat_id = $category->cat_ID;
@@ -367,7 +367,7 @@ function writer_blog_category_image() {
 	if ($image_id) {
 		return wp_get_attachment_image_url( $image_id, 'large' );
 	} else {
-		return writer_blog_default_featured_image();
+		return news_x_default_featured_image();
 	}
 }
 
@@ -377,11 +377,11 @@ endif;
  * Displays Breadcrumb if checked
  */
 
-if ( ! function_exists( 'writer_blog_breadcrumb_switcher' ) ) :
+if ( ! function_exists( 'news_x_breadcrumb_switcher' ) ) :
 
-function writer_blog_breadcrumb_switcher() {
+function news_x_breadcrumb_switcher() {
 	if ( get_theme_mod( 'ct-breadcrumb-setting' ) == 'yes' ) {
-		return writer_blog_the_breadcrumb();
+		return news_x_the_breadcrumb();
 	}
 
 	return '';
@@ -393,9 +393,9 @@ endif;
  *  Adds extra class to search widget
  */
 
-if ( ! function_exists( 'writer_blog_adapt_search_form' ) ) :
+if ( ! function_exists( 'news_x_adapt_search_form' ) ) :
 
-function writer_blog_adapt_search_form( $form ) {
+function news_x_adapt_search_form( $form ) {
     $form = str_replace(
         'input type="submit" id="searchsubmit" value="Search" /',
         'button id="searchsubmit" class="submit-right-transition">Search</button',
@@ -407,21 +407,21 @@ function writer_blog_adapt_search_form( $form ) {
 
 endif;
 // run the search form HTML output through the newly defined filter
-add_filter( 'get_search_form', 'writer_blog_adapt_search_form' );
+add_filter( 'get_search_form', 'news_x_adapt_search_form' );
 
 /**
  *  Displays author and comment info on post excerpt
  */
 
-if ( ! function_exists( 'writer_blog_excerpt_info' ) ) :
+if ( ! function_exists( 'news_x_excerpt_info' ) ) :
 
-  function writer_blog_excerpt_info() {
+  function news_x_excerpt_info() {
     ?>
       <span class="post-by"><a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ), get_the_author_meta( 'user_nicename' ) ) ); ?>"><?php the_author(); ?></a></span>
       <span class="comments-on">
         <?php
         if ( !comments_open() ) 
-          { esc_html_e( 'Off' , 'writer-blog' ); }
+          { esc_html_e( 'Off' , 'news-x' ); }
         else { ?>
           <a href="<?php echo esc_url( get_comments_link() ); ?>">
             <?php echo absint( get_comments_number() ); ?>
@@ -445,9 +445,9 @@ if ( ! isset( $content_width ) ) {
  *  Displays categories under post excerpt
  */
 
-if ( ! function_exists( 'writer_blog_list_categories' ) ) :
+if ( ! function_exists( 'news_x_list_categories' ) ) :
 
-function writer_blog_list_categories() {
+function news_x_list_categories() {
     $categories     = wp_get_post_categories( get_the_ID() );
     $category_links = get_category_link( get_the_ID() );
 
@@ -465,9 +465,9 @@ endif;
  * Imports demo data from the crafthemes server
  */
 
-if ( ! function_exists( 'writer_blog_import_files' ) ) :
+if ( ! function_exists( 'news_x_import_files' ) ) :
 
-function writer_blog_import_files() {
+function news_x_import_files() {
   return array(
     array(
       'import_file_name'           => __( 'Import Demo Data', 'writer-blog' ),
@@ -489,12 +489,12 @@ add_filter( 'pt-ocdi/import_files', 'writer_blog_import_files' );
  * Loads google fonts to the theme
  */
 
-if ( ! function_exists( 'writer_blog_fonts_url' ) ) :
+if ( ! function_exists( 'news_x_fonts_url' ) ) :
 
-function writer_blog_fonts_url() {
+function news_x_fonts_url() {
   $fonts_url  = '';
-  $Lato   = _x( 'on', 'Lato font: on or off', 'writer-blog' );
-  $Montserrat = _x( 'on', 'Montserrat font: on or off', 'writer-blog' );
+  $Lato   = _x( 'on', 'Lato font: on or off', 'news-x' );
+  $Montserrat = _x( 'on', 'Montserrat font: on or off', 'news-x' );
 
   if ( 'off' !== $Lato || 'off' !== $Montserrat ) {
     $font_families = array();
@@ -524,9 +524,9 @@ endif;
  *  Adding Google fonts to the editor
  */
 
-if ( ! function_exists( 'writer_blog_editor_styles' ) ) :
+if ( ! function_exists( 'news_x_editor_styles' ) ) :
 
-function writer_blog_editor_styles() {
+function news_x_editor_styles() {
   $Montserrat = ( array( 'editor-style.css', '//fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700,800,900' ) );
   $Lato = ( array( 'editor-style.css', '//fonts.googleapis.com/css?family=Lato:300,300i,400,400i,900' ) );
   add_editor_style( $Lato, $Montserrat );
@@ -534,43 +534,43 @@ function writer_blog_editor_styles() {
 
 endif;
 
-add_action( 'after_setup_theme', 'writer_blog_editor_styles' );
+add_action( 'after_setup_theme', 'news_x_editor_styles' );
 
 /**
  * Adding fonts to the Custom Header screen
  */
 
-if ( ! function_exists( 'writer_blog_custom_header_fonts' ) ) :
+if ( ! function_exists( 'news_x_custom_header_fonts' ) ) :
 
-function writer_blog_custom_header_fonts() {
+function news_x_custom_header_fonts() {
   wp_enqueue_style( 'Lato-font','//fonts.googleapis.com/css?family=Lato:300,300i,400,400i,900', array(), null ); 
   wp_enqueue_style( 'Montserrat-font','//fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700,800,900', array(), null );
 }
 
 endif;
 
-add_action( 'admin_print_styles-appearance_page_custom-header', 'writer_blog_custom_header_fonts' );
+add_action( 'admin_print_styles-appearance_page_custom-header', 'news_x_custom_header_fonts' );
 
 /**
  * Add support for custom header
  */
 
-if ( ! function_exists( 'writer_blog_custom_header_setup' ) ) :
+if ( ! function_exists( 'news_x_custom_header_setup' ) ) :
 
-function writer_blog_custom_header_setup() {
+function news_x_custom_header_setup() {
 
   add_theme_support( 'custom-header', array(
     'default-text-color'    => 'fff',
     'header-text'           => false,
     'width'                 => 1600,
     'height'                => 75,
-    'wp-head-callback'      => 'writer_blog_header_style',
+    'wp-head-callback'      => 'news_x_header_style',
   ) );
 }
 
 endif;
 
-add_action( 'after_setup_theme', 'writer_blog_custom_header_setup' );
+add_action( 'after_setup_theme', 'news_x_custom_header_setup' );
 
 /**
  * Adds custom background support.
@@ -580,13 +580,13 @@ add_theme_support( 'custom-background', array(
   )
 );
 
-if ( ! function_exists( 'writer_blog_header_style' ) ) :
+if ( ! function_exists( 'news_x_header_style' ) ) :
 
 /**
  * Styles the header image and text displayed on the blog
  */
 
-function writer_blog_header_style() {
+function news_x_header_style() {
     //Check if user has defined any header image.
     if ( get_header_image() ) :
   ?>
@@ -600,4 +600,4 @@ function writer_blog_header_style() {
   <?php
 }
 
-endif; // writer_blog_header_style
+endif; // news_x_header_style

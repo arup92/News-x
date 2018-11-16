@@ -38,7 +38,7 @@ function news_x_topbar_setup( $wp_customize ) {
 	/******************************** Enable/disable bottom bar copyright section *****************************/
 	$wp_customize->add_setting( 'news_x_top_bar_display_setting', array(
 		'default'	=>	'yes',
-		//'sanitize_callback' => 'writer_blog_sanitize_select',
+		//'sanitize_callback' => 'news_x_sanitize_select',
 	) );
 
 	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'news_x_top_bar_display_control', array(
@@ -534,7 +534,7 @@ function news_x_footer_copyright_setup( $wp_customize ) {
 	/******************************** Enable/disable bottom bar copyright section *****************************/
 	$wp_customize->add_setting( 'news_x_footer_copyright_display_setting', array(
 		'default'	=>	'yes',
-		//'sanitize_callback' => 'writer_blog_sanitize_select',
+		//'sanitize_callback' => 'news_x_sanitize_select',
 	) );
 
 	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'news_x_footer_copyright_display_control', array(

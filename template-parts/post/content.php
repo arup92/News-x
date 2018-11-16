@@ -24,11 +24,11 @@
 
 		<p class="post-excerpt"><?php echo esc_html( $short_excerpt ); ?></p>
 		<div class="excerpt-footer">
-			<p class="post-read-more"><a href="<?php the_permalink(); ?>"><?php esc_html_e( 'READ MORE', 'writer-blog' ) ?></a></p>
+			<p class="post-read-more"><a href="<?php the_permalink(); ?>"><?php esc_html_e( 'READ MORE', 'news-x' ) ?></a></p>
 			<div class="post-info">
-				<p class="post-category"><?php writer_blog_list_categories(); ?></p>
+				<p class="post-category"><?php news_x_list_categories(); ?></p>
 				<span class="post-date"><?php echo esc_html( get_the_date() ); ?></span>
-				<?php writer_blog_excerpt_info(); ?>
+				<?php news_x_excerpt_info(); ?>
       		</div><!-- /.post-info -->
 		</div><!-- /.excerpt-footer -->
 	</div><!-- /.sub-block -->
