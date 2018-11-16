@@ -34,6 +34,7 @@
 						endif;
 					?>
 					<div class="post-content">
+						<div class="figure-categories-bg"><?php news_x_list_categories(); ?></div>
 						<a href="<?php the_permalink(); ?>"><h3><?php the_title(); ?></h3></a>
 					</div><!-- /.post-content -->
 				</div>

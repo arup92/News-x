@@ -986,6 +986,19 @@ input, textarea, select, fieldset {
   margin-right: 0;
 }
 
+.figure-categories-bg {
+  background-color: mediumturquoise;
+  font-size: 1.2rem;
+  line-height: 1;
+  padding: .3rem .5rem;
+  margin-right: .5rem;
+  color: white;
+  border-radius: 0;
+  display: inline-block;
+  font-weight: bold;
+  opacity: 1;
+}
+
 /**
  * --------------------------------------------------------------------------------
  * side-Bar style
