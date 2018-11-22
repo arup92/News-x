@@ -1,5 +1,29 @@
 ( function($) {
 
+	/* Mobile menu
+	----------------------------------------------------- */
+
+	$( '.dropdown-toggle' ).on( 'click', function(){
+		$( this ).toggleClass( 'toggled' );
+	 	$( this ).next().slideToggle();
+	} );
+
+	// Function to show the menu
+	function show_menu() {
+		$( '.nav-parent' ).addClass( 'mobile-menu-open' );
+		$( '.mobile-menu-overlay' ).addClass( 'mobile-menu-active' );
+	}
+
+	// Function to hide the menu
+	function hide_menu(){
+		$( '.nav-parent' ).removeClass( 'mobile-menu-open' );
+		$( '.mobile-menu-overlay' ).removeClass( 'mobile-menu-active' );
+	}
+
+	$( '.menubar-right' ).on( 'click', show_menu );
+	$( '.mobile-menu-overlay' ).on( 'click', hide_menu );
+	$( '.menubar-close' ).on( 'click', hide_menu );
+
 	/**
 	 * Slick Slider
 	 */

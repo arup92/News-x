@@ -8,8 +8,8 @@
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
 		<?php wp_head(); ?>
 	</head>
-	<body>
-
+	<body <?php body_class(); ?>>
+		<div class="mobile-menu-overlay"></div>
 		<?php get_template_part( 'template-parts/header/top', 'bar' ); ?>
 
 		<header>
@@ -28,7 +28,7 @@
 				</div><!-- /.container -->
 			</div><!-- /.u-full-width /.header-->
 		</header>
-			<div class="u-full-width nav-manu">
+			<div class="u-full-width nav-menu">
 				<div class="container">
 		            <div class="row vertical-align">	
 		                <div class="nine columns">
@@ -51,42 +51,24 @@
 			</div><!-- /.u-full-width /.nav-manu -->
 
 			<div class="container mobile-menu-container">
-				<div class="row">
-					<div class="mobile-navigation">
-						<span class="menubar-right fa fa-bars"></span>        
-						<nav class="nav-parent">
+			    <div class="row">
+				    <div class="mobile-navigation">
+			    		<span class="menubar-right fa fa-bars"></span>
+		        		<nav class="nav-parent">
 							<span class="menubar-close fa fa-times"></span>
-							<ul class="mobile-nav">
-								<li><a href="#">HOME</a></li>
-								<li class="has-children">
-									<a href="#">PAGES</a>
-									<span class="dropdown-toggle fa fa-angle-down"></span>
-									<ul>
-										<li><a href="#">Lorem</a></li>
-										<li class="has-sub-children">
-											<a href="#">Ipsum</a>
-											<span class="dropdown-toggle fa fa-angle-down"></span>
-											<ul>
-												<li><a href="#">About me</a></li>
-												<li><a href="#">About us</a></li>
-											</ul>
-										</li>
-										<li><a href="#">Dolor Sit</a></li>
-									</ul>
-								</li>
-								<li class="has-children">
-									<a href="#about">ABOUT</a>
-									<span class="dropdown-toggle fa fa-angle-down"></span>
-									<ul>
-										<li><a href="#">About Techy</a></li>
-										<li><a href="#">About</a></li>
-										<li><a href="#">About 3People</a></li>
-										<li><a href="#">About Envato</a></li>
-									</ul>
-								</li>
-								<li><a href="#">CONTACT</a></li>
-							</ul>
+		        			<?php
+								wp_nav_menu( array(
+									'theme_location'	=> 'mobile_menu',
+									'container'			=> false,
+									'menu_class'		=> 'mobile-nav',
+									'depth'				=> '3',
+									'walker'			=> new news_x_dropdown_toggle_walker_nav_menu()
+								) );
+							?>
+							<div class="search-mobile">
+								<?php get_template_part( 'template-parts/header/search', 'form' ); ?>
+							</div><!-- /.search-mobile -->
 						</nav>
 					</div> <!-- /.mobile-navigation -->
-				</div>
-			</div>
+			    </div>
+		    </div>
