@@ -388,7 +388,7 @@
 
 .figure-categories-bg {
 
-	background-color: $green-color;
+	/*background-color: $green-color;
 	font-size: 1.2rem;
 	line-height: 1;
 	padding: .3rem .5rem;
@@ -397,5 +397,17 @@
 	border-radius: 0;
 	display: inline-block;
 	font-weight: bold;
-	opacity: 1;
+	opacity: 1;*/
 }
+.separat-category a{
+    background-color: mediumturquoise;
+    font-size: 1.2rem;
+    line-height: 1;
+    padding: .3rem .5rem;
+    color: white;
+    border-radius: 0;
+    display: inline-block;
+    font-weight: bold;
+    opacity: 1;
+    margin-right: .2rem;
+    }

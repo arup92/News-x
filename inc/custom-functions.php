@@ -451,7 +451,7 @@ function news_x_list_categories() {
     $categories     = wp_get_post_categories( get_the_ID() );
     $category_links = get_category_link( get_the_ID() );
 
-    echo '<span class="single-category">';
+    echo '<span class="single-category separat-category">';
     foreach($categories as $category){
 
         echo '<a href="' . esc_url( get_category_link( $category ) ) . '">' . esc_html( get_cat_name( $category ) ) . '</a>';
