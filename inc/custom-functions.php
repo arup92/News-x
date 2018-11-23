@@ -156,7 +156,7 @@ endif;
 if ( ! function_exists( 'news_x_the_breadcrumb' ) ) :
 
 function news_x_the_breadcrumb() {
-    $sep = ' <span class="fa fa-angle-double-right"></span> ';
+    $sep = ' <span class="fa fa-angle-right"></span> ';
     if ( !is_front_page() ) {
 
 	// Start the breadcrumb with a link to your homepage
@@ -619,6 +619,54 @@ function news_x_list_categories() {
         echo '<a href="' . esc_url( get_category_link( $category ) ) . '">' . esc_html( get_cat_name( $category ) ) . '</a>';
     }
     echo '</span>';
+}
+
+endif;
+
+/**
+ * Displays Breadcrumb on post/pages
+ */
+
+if ( ! function_exists( 'news_x_the_breadcrumb' ) ) :
+
+function writer_blog_the_breadcrumb() {
+    $sep = ' <span class="fa fa-angle-double-right"></span> ';
+    if ( !is_front_page() ) {
+
+  // Start the breadcrumb with a link to your homepage
+        echo '<div class="container"><div class="breadcrumb clearfix"><span class="fa fa-home"></span>';
+        echo '<a href="' . esc_url( home_url() ) . '">';
+        echo esc_html__( 'Home', 'news-x' );
+        echo '</a>' . $sep;
+
+  // Check if the current page is a category, an archive or a single page. If so show the category or archive name.
+        if ( is_category() || is_single() ){
+            the_category( ', ' );
+        } elseif ( is_archive() || is_single() ){
+            if ( is_day() ) {
+                echo get_the_date();
+            } elseif ( is_month() ) {
+                echo get_the_date( 'F Y' );
+            } elseif ( is_year() ) {
+                echo get_the_date( 'Y' );
+            } else {
+                esc_html__( 'Blog Archives', 'news-x' );
+            }
+        }
+
+  // If the current page is a single post, show its title with the separator
+        if ( is_single() ) {
+            echo $sep;
+            the_title();
+        }
+
+  // If the current page is a static page, show its title.
+        if ( is_page() ) {
+            echo the_title();
+        }
+
+        echo '</div></div><!-- /.container -->';
+    }
 }
 
 endif;

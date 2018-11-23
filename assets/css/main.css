@@ -1103,6 +1103,13 @@ input, textarea, select, fieldset {
   background-color: white;
 }
 
+.category-title h1 {
+  font-size: 3.6rem;
+  color: #404040;
+  margin-bottom: 0;
+  margin-top: 1.6rem;
+}
+
 /**
  * --------------------------------------------------------------------------------
  * Footer & Buttom-Bar style
@@ -1192,10 +1199,6 @@ input, textarea, select, fieldset {
  * single page style 
  * --------------------------------------------------------------------------------
 */
-.single-post-heading {
-  margin-top: 2rem;
-}
-
 .single-post-text {
   background-color: #fff;
   padding: 2.6rem;
@@ -1330,6 +1333,19 @@ label {
 .pagination-nav .left-nav {
   display: flex;
   align-items: center;
+}
+
+.breadcrumb {
+  margin-top: 2.2rem;
+  font-size: 1.4rem;
+  color: #b3afaf;
+}
+.breadcrumb .fa-angle-right:before {
+  font-size: 1rem;
+}
+.breadcrumb .fa-home:before {
+  margin-right: .5rem;
+  font-size: 1rem;
 }
 
 /**

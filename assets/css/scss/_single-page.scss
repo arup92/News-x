@@ -5,10 +5,6 @@
  * --------------------------------------------------------------------------------
 */
 
-.single-post-heading {
-	margin-top: 2rem;
-}
-
 .single-post-text {
     background-color: #fff;
     padding: 2.6rem;
@@ -155,5 +151,20 @@ label {
 	.left-nav {
 		display: flex;
 		align-items: center;
+	}
+}
+
+.breadcrumb {
+    margin-top: 2.2rem;
+    font-size: 1.4rem;
+    color: #b3afaf;
+
+    .fa-angle-right:before {
+    font-size: 1rem;
+	}
+
+	.fa-home:before {
+	    margin-right: .5rem;
+	    font-size: 1rem;
 	}
 }

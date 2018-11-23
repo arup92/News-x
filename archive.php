@@ -6,6 +6,11 @@
 get_header();
 ?>
 
+<?php news_x_the_breadcrumb(); ?>
+<div class="container category-title">
+	<h1><?php echo single_cat_title(); ?></h1>	
+</div><!-- /.container -->
+
 <div class="container section-five">
 
     <!-- /.section-title-red -->
