@@ -25,7 +25,7 @@
 			<?php
 					endwhile;
 				else :
-					echo esc_html__( 'Ready to get started with your first post? Goto "Posts->add new" from your dashboard' );
+					echo esc_html__( 'Ready to get started with your first post? Goto "Posts->add new" from your dashboard', 'news-x' );
 				endif;
 				wp_reset_query();
 			?>

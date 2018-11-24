@@ -12,6 +12,7 @@ ul,
 ol {
   margin: 0;
   padding: 0;
+  list-style-position: inside;
 }
 
 a {
@@ -127,6 +128,33 @@ a, a:hover, a:focus {
   font-weight: 600;
 }
 
+blockquote::before {
+  content: '"';
+  color: #1f1f1f;
+  font-size: 6.8rem;
+  font-weight: 900;
+  line-height: 1;
+  position: absolute;
+  top: 0px;
+  left: -42px;
+}
+
+blockquote,
+blockquote p {
+  position: relative;
+  font-size: 2.4rem;
+}
+
+.single-post-text {
+  box-sizing: border-box;
+}
+.single-post-text ul ul,
+.single-post-text ul ul ul,
+.single-post-text ol ol,
+.single-post-text ol ol ol {
+  margin-left: 3rem;
+}
+
 /**
  * 
  * #.# Top Bar
@@ -229,6 +257,10 @@ a, a:hover, a:focus {
 }
 
 /* Navigation Menu */
+.header-navigation {
+  z-index: 10;
+}
+
 .nav-menu {
   background-color: #fff;
   border-top: 1px solid rgba(51, 51, 51, 0.12);
@@ -259,7 +291,7 @@ a, a:hover, a:focus {
 .main-nav > li > a {
   color: #404040;
   display: block;
-  margin: 1.4rem 1.6rem;
+  margin: 1.4rem;
   position: relative;
 }
 

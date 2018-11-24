@@ -45,25 +45,29 @@ if ( have_posts() ) :
 
 				<div class="pagination-nav row">
 					<div class="six columns left-nav">
-						<div class="nav-prev"></div><!-- /.nav-prev -->
 						<?php $prev_post = get_adjacent_post( false, '', false ); ?>
 							<?php if ( is_a( $prev_post, 'WP_Post' ) ) { ?>
+							<div class="nav-prev"></div><!-- /.nav-prev -->
 							<a href="<?php echo esc_url( get_permalink( get_adjacent_post( false, '', false)->ID ) ); ?>" class="btn prev"><?php echo esc_html( get_the_title( get_adjacent_post( false, '', false)->ID ) ); ?></a>
-						<?php } ?>
+						<?php } else {
+							echo '&nbsp;';
+						} ?>
 					</div><!-- /.six columns -->
 
 					<div class="six columns right-nav">
 					<?php $next_post = get_adjacent_post( false, '', true ); ?>
 						<?php if ( is_a( $next_post, 'WP_Post' ) ) { ?>
 						<a href="<?php echo esc_url( get_permalink( get_adjacent_post( false, '', true)->ID ) ); ?>" class="btn next right"><?php echo esc_html( get_the_title( get_adjacent_post( false, '', true)->ID ) ); ?></a>
+						<div class="nav-next"></div><!-- /.nav-prev -->
 					<?php } ?>
-					<div class="nav-next"></div><!-- /.nav-prev -->
 					</div><!-- /.six columns -->
 				</div><!-- /.pagination-nav -->
-
-				<div class="shadow">
-					<?php comments_template();?>
-				</div><!-- /.shadow -->
+				
+				<?php if ( comments_open() ) : ?>
+					<div class="shadow">
+						<?php comments_template();?>
+					</div><!-- /.shadow -->
+				<?php endif ?>
 			</div><!-- /.row .eight columns -->
 				<?php get_sidebar(); ?>
 		</div><!-- /.row -->	
