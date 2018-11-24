@@ -47,7 +47,6 @@ if ( post_password_required() ) {
 						'avatar_size' => 42,
 						'style'       => 'ol',
 						'short_ping'  => true,
-						//'callback'	  => 'news_x_comments_callback',
 					) );
 				?>
 			</ol> <!-- /.comment-list .container -->
@@ -62,7 +61,7 @@ if ( post_password_required() ) {
 		// If comments are closed and there are comments, let's leave a little note, shall we?
 		if ( ! comments_open() && get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) : ?>
 
-			<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'news_x' ); ?></p>
+			<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'news-x' ); ?></p>
 		<?php
 		endif;
 

@@ -160,10 +160,10 @@ function news_x_the_breadcrumb() {
     if ( !is_front_page() ) {
 
 	// Start the breadcrumb with a link to your homepage
-        echo '<div class="container"><div class="breadcrumb clearfix"><span class="fa fa-home"></span>';
-        echo '<a href="' . esc_url( home_url() ) . '">';
-        echo esc_html__( 'Home', 'news_x' );
-        echo '</a>' . $sep;
+    echo '<div class="container"><div class="breadcrumb clearfix"><span class="fa fa-home"></span>';
+    echo '<a href="' . esc_url( home_url() ) . '">';
+    echo esc_html__( 'Home', 'news-x' );
+    echo '</a>' . $sep;
 
 	// Check if the current page is a category, an archive or a single page. If so show the category or archive name.
         if ( is_category() || is_single() ){
@@ -176,7 +176,7 @@ function news_x_the_breadcrumb() {
             } elseif ( is_year() ) {
                 echo get_the_date( 'Y' );
             } else {
-                esc_html__( 'Blog Archives', 'news_x' );
+                esc_html__( 'Blog Archives', 'news-x' );
             }
         }
 
@@ -234,7 +234,7 @@ public function load_media() {
  */
  public function add_category_image ( $taxonomy ) { ?>
    <div class="form-field term-group">
-     <label for="category-image-id"><?php esc_html_e('Image', 'news_x'); ?></label>
+     <label for="category-image-id"><?php esc_html_e('Image', 'news-x'); ?></label>
      <input type="hidden" id="category-image-id" name="category-image-id" class="custom_media_url" value="">
      <div id="category-image-wrapper"></div>
      <p>
@@ -470,13 +470,13 @@ if ( ! function_exists( 'news_x_import_files' ) ) :
 function news_x_import_files() {
   return array(
     array(
-      'import_file_name'           => __( 'Import Demo Data', 'writer-blog' ),
+      'import_file_name'           => __( 'Import Demo Data', 'news-x' ),
       'import_file_url'            => 'https://crafthemes.com/xml/writer-demo.xml',
       'import_widget_file_url'     => 'https://crafthemes.com/xml/writer-widgets.wie',
       'import_customizer_file_url' => 'http://crafthemes.com/xml/writer-blog-export.dat',
       'import_preview_image_url'   => 'https://www.crafthemes.com/themes/writer/wp-content/themes/techy/screenshot.png',
-      'import_notice'              => __( 'After you import this demo, you will have to setup the menu. <a href="https://www.crafthemes.com/2018/07/02/writer-blog-free-wordpress-theme-documentation/" target="_blank">Click here</a> to see the complete theme documentation.', 'writer-blog' ),
-      'preview_url'                => 'https://www.crafthemes.com/themes/writer/',
+      'import_notice'              => __( 'After you import this demo, you will have to setup the menu. <a href="https://www.crafthemes.com/2018/07/02/writer-blog-free-wordpress-theme-documentation/" target="_blank">Click here</a> to see the complete theme documentation.', 'news-x' ),
+      'preview_url'                => 'https://www.crafthemes.com/themes/news-x/',
     ),
   );
 }

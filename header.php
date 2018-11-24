@@ -31,7 +31,7 @@
 			<div class="u-full-width nav-menu">
 				<div class="container">
 		            <div class="row vertical-align">	
-		                <div class="nine columns">
+		                <div class="nine columns header-navigation">
 			                <?php
 			                	wp_nav_menu( array( 
 									'theme_location' => 'header_menu',
