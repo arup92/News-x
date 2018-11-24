@@ -32,7 +32,7 @@
 					endif;
 				?>
 				<a href="<?php the_permalink(); ?>"><h2><?php the_title(); ?></h2></a>
-				<p><a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ), get_the_author_meta( 'user_nicename' ) ) ); ?>"><span class="author"><?php the_author(); ?></span></a> -  <?php echo esc_html( get_the_date() ); ?></p>
+				<p class="small-font"><a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ), get_the_author_meta( 'user_nicename' ) ) ); ?>"><span class="author"><?php the_author(); ?></span></a> -  <?php echo esc_html( get_the_date() ); ?></p>
 				<?php
 					$trim_excerpt = get_the_excerpt();
 					$short_excerpt = wp_trim_words( $trim_excerpt, $num_words = 15, $more = '... ' );
