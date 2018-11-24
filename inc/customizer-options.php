@@ -38,7 +38,7 @@ function news_x_topbar_setup( $wp_customize ) {
 	/******************************** Enable/disable bottom bar copyright section *****************************/
 	$wp_customize->add_setting( 'news_x_top_bar_display_setting', array(
 		'default'	=>	'yes',
-		//'sanitize_callback' => 'news_x_sanitize_select',
+		'sanitize_callback' => 'news_x_sanitize_select',
 	) );
 
 	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'news_x_top_bar_display_control', array(
@@ -54,11 +54,11 @@ function news_x_topbar_setup( $wp_customize ) {
 
 	/******************************** Display bottom bar copyright text *****************************/
 	$wp_customize->add_setting( 'news_x_top_bar_text_setting', array(
-		'default'	=>	'Copyright. All Rights Reserved.',
-		//'sanitize_callback' => 'sanitize_textarea_field',
+		'default'	=>	'contact@company.com.',
+		'sanitize_callback' => 'sanitize_text_field',
 	) );
 
-	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'news-x-top-bar-text-control', array(
+	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'news_x_top_bar_text_control', array(
 		'label'		=>	__( 'Topbar Text', 'news-x' ),
 		'type'		=>	'text',
 		'section'	=>	'news_x_top_bar_setup_section',
@@ -81,7 +81,7 @@ function news_x_sociallink_setup( $wp_customize ) {
 	/******************************** Display facebook link *****************************/
 	$wp_customize->add_setting( 'news_x_facebook_text_setting', array(
 		'default'	=>	'#',
-		//'sanitize_callback' => 'sanitize_textarea_field',
+		'sanitize_callback' => 'sanitize_text_field',
 	) );
 
 	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'news-x-facebook-text-control', array(
@@ -94,7 +94,7 @@ function news_x_sociallink_setup( $wp_customize ) {
 	/******************************** Display twitter link *****************************/
 	$wp_customize->add_setting( 'news_x_twitter_text_setting', array(
 		'default'	=>	'#',
-		//'sanitize_callback' => 'sanitize_textarea_field',
+		'sanitize_callback' => 'sanitize_text_field',
 	) );
 
 	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'news-x-twitter-text-control', array(
@@ -107,7 +107,7 @@ function news_x_sociallink_setup( $wp_customize ) {
 	/******************************** Display Instagram link *****************************/
 	$wp_customize->add_setting( 'news_x_instagram_text_setting', array(
 		'default'	=>	'#',
-		//'sanitize_callback' => 'sanitize_textarea_field',
+		'sanitize_callback' => 'sanitize_text_field',
 	) );
 
 	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'news-x-instagram-text-control', array(
@@ -120,7 +120,7 @@ function news_x_sociallink_setup( $wp_customize ) {
 	/******************************** Display Youtube link *****************************/
 	$wp_customize->add_setting( 'news_x_youtube_text_setting', array(
 		'default'	=>	'#',
-		//'sanitize_callback' => 'sanitize_textarea_field',
+		'sanitize_callback' => 'sanitize_text_field',
 	) );
 
 	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'news-x-youtube-control', array(
@@ -132,7 +132,7 @@ function news_x_sociallink_setup( $wp_customize ) {
 	/******************************** Display Whatsapp link *****************************/
 	$wp_customize->add_setting( 'news_x_whatsapp_text_setting', array(
 		'default'	=>	'#',
-		//'sanitize_callback' => 'sanitize_textarea_field',
+		'sanitize_callback' => 'sanitize_text_field',
 	) );
 
 	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'news-x-whatsapp-control', array(
@@ -144,7 +144,7 @@ function news_x_sociallink_setup( $wp_customize ) {
 	/******************************** Display LinkedIn link *****************************/
 	$wp_customize->add_setting( 'news_x_linkedin_text_setting', array(
 		'default'	=>	'#',
-		//'sanitize_callback' => 'sanitize_textarea_field',
+		'sanitize_callback' => 'sanitize_text_field',
 	) );
 
 	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'news-x-linkedin-control', array(
@@ -153,8 +153,6 @@ function news_x_sociallink_setup( $wp_customize ) {
 		'section'	=>	'news_x_social_links_setup_section',
 		'settings'	=>	'news_x_linkedin_text_setting',
 	) ) );
-
-
 }
 
 add_action( 'customize_register', 'news_x_sociallink_setup');
@@ -273,7 +271,7 @@ function newsx_homepage_setup_setup( $wp_customize ) {
 
 	$wp_customize->add_setting( 'news_x_big_section_title_setting', array(
 		'default'	=>	'News',
-		//'sanitize_callback' => 'sanitize_textarea_field',
+		'sanitize_callback' => 'sanitize_text_field',
 	) );
 
 	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'news_x_big_section_title_control', array(
@@ -319,7 +317,7 @@ function newsx_homepage_setup_setup( $wp_customize ) {
 	// Display bottom bar copyright text
 	$wp_customize->add_setting( 'news_x_first_half_section_title_setting', array(
 		'default'	=>	'News',
-		//'sanitize_callback' => 'sanitize_textarea_field',
+		'sanitize_callback' => 'sanitize_textarea_field',
 	) );
 
 	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'news_x_first_half_section_title_control', array(
@@ -366,7 +364,7 @@ function newsx_homepage_setup_setup( $wp_customize ) {
 		// Display bottom bar copyright text
 		$wp_customize->add_setting( 'news_x_second_half_section_title_setting', array(
 			'default'	=>	'News',
-			//'sanitize_callback' => 'sanitize_textarea_field',
+			'sanitize_callback' => 'sanitize_text_field',
 		) );
 
 		$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'news_x_second_halff_section_title_control', array(
@@ -414,7 +412,7 @@ function newsx_homepage_setup_setup( $wp_customize ) {
 		// Display bottom bar copyright text
 		$wp_customize->add_setting( 'news_x_fullwidth-overlay_section_title_setting', array(
 			'default'	=>	'News',
-			//'sanitize_callback' => 'sanitize_textarea_field',
+			'sanitize_callback' => 'sanitize_text_field',
 		) );
 
 		$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'news_x_fullwidth-overlay_section_title_control', array(
@@ -461,7 +459,7 @@ function newsx_homepage_setup_setup( $wp_customize ) {
 		// Display bottom bar copyright text
 		$wp_customize->add_setting( 'news_x_fullwidth-post_section_title_setting', array(
 			'default'	=>	'News',
-			//'sanitize_callback' => 'sanitize_textarea_field',
+			'sanitize_callback' => 'sanitize_text_field',
 		) );
 
 		$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'news_x_fullwidth-post_section_title_control', array(
@@ -509,7 +507,7 @@ function newsx_homepage_setup_setup( $wp_customize ) {
 		// Display bottom bar copyright text
 		$wp_customize->add_setting( 'news_x_flash_post_section_title_setting', array(
 			'default'	=>	'Braking News',
-			//'sanitize_callback' => 'sanitize_textarea_field',
+			'sanitize_callback' => 'sanitize_text_field',
 		) );
 
 		$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'news_x_flash_post_section_title_control', array(
@@ -534,7 +532,7 @@ function news_x_footer_copyright_setup( $wp_customize ) {
 	/******************************** Enable/disable bottom bar copyright section *****************************/
 	$wp_customize->add_setting( 'news_x_footer_copyright_display_setting', array(
 		'default'	=>	'yes',
-		//'sanitize_callback' => 'news_x_sanitize_select',
+		'sanitize_callback' => 'news_x_sanitize_select',
 	) );
 
 	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'news_x_footer_copyright_display_control', array(
@@ -551,7 +549,7 @@ function news_x_footer_copyright_setup( $wp_customize ) {
 	/******************************** Display bottom bar copyright text *****************************/
 	$wp_customize->add_setting( 'news_x_footer_copyright_text_setting', array(
 		'default'	=>	'Copyright. All Rights Reserved.',
-		//'sanitize_callback' => 'sanitize_textarea_field',
+		'sanitize_callback' => 'sanitize_textarea_field',
 	) );
 
 	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'news-x-footer-copyright-text-control', array(
@@ -604,4 +602,19 @@ function newsx_validate_image( $input, $default = '' ) {
 	// return it; otherwise, return
 	// the default.
 	return ( $file['ext'] ? $input : $default );
+}
+
+// Sanitize Select fields
+
+function news_x_sanitize_select( $input ) {
+	$valid = array(
+		'yes'		=>	'Yes',
+		'no' 		=>	'No',
+	);
+	
+	if ( array_key_exists( $input, $valid ) ) {
+		return $input;
+	} else {
+		return '';
+	}
 }
