@@ -39,6 +39,4 @@
     </div><!-- /.row -->
 </div>
 
-
-
 <?php get_footer(); ?>	
