@@ -57,8 +57,7 @@ if ( have_posts() ) :
 					<div class="six columns left-nav">
 						<?php $prev_post = get_adjacent_post( false, '', false ); ?>
 							<?php if ( is_a( $prev_post, 'WP_Post' ) ) { ?>
-							<div class="nav-prev"></div><!-- /.nav-prev -->
-							<a href="<?php echo esc_url( get_permalink( get_adjacent_post( false, '', false)->ID ) ); ?>" class="btn prev"><?php echo wp_kses_post( get_the_title( get_adjacent_post( false, '', false)->ID ) ); ?></a>
+							<a href="<?php echo esc_url( get_permalink( get_adjacent_post( false, '', false)->ID ) ); ?>" class="btn prev left"><div class="nav-prev"></div><!-- /.nav-prev --><?php echo wp_kses_post( get_the_title( get_adjacent_post( false, '', false)->ID ) ); ?></a>
 						<?php } else {
 							echo '&nbsp;';
 						} ?>
@@ -67,8 +66,8 @@ if ( have_posts() ) :
 					<div class="six columns right-nav">
 					<?php $next_post = get_adjacent_post( false, '', true ); ?>
 						<?php if ( is_a( $next_post, 'WP_Post' ) ) { ?>
-						<a href="<?php echo esc_url( get_permalink( get_adjacent_post( false, '', true)->ID ) ); ?>" class="btn next right"><?php echo wp_kses_post( get_the_title( get_adjacent_post( false, '', true)->ID ) ); ?></a>
-						<div class="nav-next"></div><!-- /.nav-prev -->
+						<a href="<?php echo esc_url( get_permalink( get_adjacent_post( false, '', true)->ID ) ); ?>" class="btn next right"><?php echo wp_kses_post( get_the_title( get_adjacent_post( false, '', true)->ID ) ); ?>
+						<div class="nav-next"></div><!-- /.nav-prev --></a>
 					<?php } ?>
 					</div><!-- /.six columns -->
 				</div><!-- /.pagination-nav -->

@@ -18,7 +18,7 @@
 					<img src="<?php echo esc_url( the_post_thumbnail_url( 'full' ) ); ?>" class="full-image" alt="image" />
 				</div><!-- /.single-post-h -->
 			<?php endif; ?>
-		<div class="single-post-text">
+		<div class="single-post-text shadow">
 			<?php
 				the_content();
 
@@ -31,6 +31,11 @@
 					)
 				);
 			?>
-		</div><!-- /.single-post-text -->	
+		</div><!-- /.single-post-text -->
+		<?php if ( comments_open() ) : ?>
+			<div class="shadow margin-top">
+				<?php comments_template();?>
+			</div><!-- /.shadow -->
+		<?php endif ?>
 	</div><!-- /.eight columns -->
 </div><!-- /.container -->

@@ -429,3 +429,10 @@
 		color: $dark-color;
 	}
 }
+
+.single-post-heading {
+	h1 {
+		overflow-wrap: break-word;
+		width: 100%;
+	}
+}

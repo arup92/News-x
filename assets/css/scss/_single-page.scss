@@ -18,6 +18,11 @@
 		max-width: 100%;
 		height: auto;
 	}
+
+	iframe {
+		max-width: 100%;
+		max-height: 100%;
+	}
 }
 
 input[type="text"], 
@@ -69,6 +74,7 @@ label {
 }
 .author-info {
 	border-top: 1px solid #1f1f1f;
+	margin-top: 1.6rem;
 	padding-top: 2.4rem;
 	clear: both;
 
@@ -149,12 +155,19 @@ label {
 
 		.right {
 			text-align: right;
+			overflow-wrap: break-word;
+			width: 100%;
 		}
 	}
 
 	.left-nav {
 		display: flex;
 		align-items: center;
+
+		.left {
+			overflow-wrap: break-word;
+			width: 100%;
+		}
 	}
 }
 
@@ -171,4 +184,8 @@ label {
 	    margin-right: .5rem;
 	    font-size: 1rem;
 	}
+}
+
+.margin-top {
+	margin-top: 1.6rem;
 }
