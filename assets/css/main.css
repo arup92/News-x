@@ -1114,6 +1114,12 @@ input, textarea, select, fieldset {
   width: 100%;
 }
 
+.page-template img,
+.blog img {
+  width: 100%;
+  height: auto;
+}
+
 /**
  * --------------------------------------------------------------------------------
  * side-Bar style
