@@ -12,6 +12,7 @@
     p {
 		font-size: 1.8rem;
 		line-height: 2.6rem;
+		margin-bottom: 0;
 	}
 
 	img {
@@ -68,7 +69,6 @@ label {
 }
 
 .content-footer {
-    border-top: 1px solid #1f1f1f;
     padding-top: 2.4rem;
     clear: both;
 }
@@ -189,3 +189,19 @@ label {
 .margin-top {
 	margin-top: 1.6rem;
 }
+
+.post-category {
+    display: inline-block;
+}
+.single-post-info{
+	.post-date {
+	    float: right;
+	    line-height: 2;
+	}
+	.post-date:before {
+	    content: "\f274";
+	    font: normal 400 normal 1.6rem/1 FontAwesome;
+	    margin-right: .4rem;
+	    color: $green-color;
+	}
+}	

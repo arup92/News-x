@@ -1126,6 +1126,15 @@ input, textarea, select, fieldset {
   height: auto;
 }
 
+.archive img {
+  max-width: 100%;
+  height: auto;
+}
+
+.page-404 .block {
+  margin-top: 2.6rem;
+}
+
 /**
  * --------------------------------------------------------------------------------
  * side-Bar style
@@ -1185,6 +1194,11 @@ input, textarea, select, fieldset {
 .searchform #searchsubmit {
   margin-bottom: 0;
   padding: .5rem 0;
+}
+
+.search img {
+  width: 100%;
+  height: auto;
 }
 
 /**
@@ -1378,6 +1392,7 @@ input, textarea, select, fieldset {
 .single-post-text p {
   font-size: 1.8rem;
   line-height: 2.6rem;
+  margin-bottom: 0;
 }
 .single-post-text img {
   max-width: 100%;
@@ -1432,7 +1447,6 @@ label {
 }
 
 .content-footer {
-  border-top: 1px solid #1f1f1f;
   padding-top: 2.4rem;
   clear: both;
 }
@@ -1537,6 +1551,21 @@ label {
 
 .margin-top {
   margin-top: 1.6rem;
+}
+
+.post-category {
+  display: inline-block;
+}
+
+.single-post-info .post-date {
+  float: right;
+  line-height: 2;
+}
+.single-post-info .post-date:before {
+  content: "\f274";
+  font: normal 400 normal 1.6rem/1 FontAwesome;
+  margin-right: .4rem;
+  color: mediumturquoise;
 }
 
 /**
