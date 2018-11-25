@@ -33,6 +33,22 @@ if ( have_posts() ) :
 								)
 							);
 						?>
+												
+						<div class="content-footer">
+							<div class="single-post-info">
+								<p class="post-category"><?php news_x_list_categories(); ?></p>
+								<?php
+									if( $tags = get_the_tags() ) {
+									    echo '<span class="meta-sep"></span>';
+									    foreach( $tags as $tag ) {
+									        $sep = ( $tag === end( $tags ) ) ? '' : ', ';
+									        echo '<a href="' . esc_url( get_term_link( $tag, $tag->taxonomy ) ) . '">#' . esc_html( $tag->name ) . '</a>' . esc_html( $sep );
+									    }
+									}
+								?>
+								<span class="post-date"><?php echo esc_html( get_the_date() ); ?></span>
+				      		</div><!-- /.single-post-info -->
+						</div><!-- /.content-footer -->
 
 						<div class="author-info">
 							<div class="author-image clearfix">
