@@ -1071,19 +1071,6 @@ input, textarea, select, fieldset {
   margin-right: 0;
 }
 
-.figure-categories-bg {
-  /*background-color: $green-color;
-  font-size: 1.2rem;
-  line-height: 1;
-  padding: .3rem .5rem;
-  margin-right: .5rem;
-  color: $white-color;
-  border-radius: 0;
-  display: inline-block;
-  font-weight: bold;
-  opacity: 1;*/
-}
-
 .separat-category a {
   background-color: mediumturquoise;
   font-size: 1.2rem;
@@ -1095,6 +1082,31 @@ input, textarea, select, fieldset {
   font-weight: bold;
   opacity: 1;
   margin-right: .2rem;
+}
+
+.page-numbers:not(.prev):not(.next) {
+  text-align: center;
+  display: inline-block;
+  line-height: 2.4rem;
+  width: 2.4rem;
+}
+
+.link-pages {
+  margin-bottom: 1.6rem;
+}
+.link-pages span,
+.link-pages .current {
+  background-color: mediumturquoise;
+  color: white;
+  font-weight: 700;
+  padding: 1rem;
+  border-radius: 3px;
+  box-shadow: 0 1px 1px 0 rgba(0, 1, 1, 0.1);
+  box-sizing: content-box;
+}
+.link-pages > span {
+  background-color: white;
+  color: #404040;
 }
 
 /**

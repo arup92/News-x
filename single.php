@@ -23,6 +23,16 @@ if ( have_posts() ) :
 					<?php endif; ?>
 					<div class="single-post-text">
 						<?php echo the_content(); ?>
+						<?php
+							wp_link_pages(
+								array(
+									'before'      => '<div class="link-pages">' . __( 'Continue Reading:', 'writer-blog' ),
+									'after'       => '</div>',
+									'link_before' => '<span class="page-numbers">',
+									'link_after'  => '</span>',
+								)
+							);
+						?>
 
 						<div class="author-info">
 							<div class="author-image clearfix">
