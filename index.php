@@ -1,30 +1,44 @@
 <?php get_header(); ?>
 <?php get_template_part( 'template-parts/home/section', 'news-marquee' ); ?>
 <?php get_template_part( 'template-parts/home/section', 'slider' ); ?>
+<div class="container category-title">
+	<h1><?php echo single_cat_title(); ?></h1>	
+</div><!-- /.container -->
 
-			<div class="container two">
-				<div class="row main-banner">
-					<div class="eight columns">
-						<div class="section-two block shadow clearfix">
-							<?php get_template_part( 'template-parts/home/section', 'full-block' ); ?>
-						</div><!-- /.section-two /.block shadow /.clearfix -->
-						<div class="section-three clearfix">
-							<?php get_template_part( 'template-parts/home/section', 'half-block' ); ?>
-						</div><!-- /.section-three /.block /.shadow /.clearfix -->
-					</div> <!-- /.eight .columns -->
-					<?php get_sidebar(); ?>
-				</div><!-- /.row /.main-banner -->
-			</div><!-- /.container -->
+<div class="container section-five">
 
-			<?php get_template_part( 'template-parts/home/section', 'fullwidth-overlay' ); ?>
-			<?php get_template_part( 'template-parts/home/section', 'fullwidth' ); ?>
+    <!-- /.section-title-red -->
+    <div class="row">
+    	<div class="eight columns masonry">
+        <?php
+		if ( have_posts() ) :
+			while ( have_posts() ) : the_post();
+		?>
+		<div class="cols shadow">
+            <div class="fullwidth-post-section">
+                <?php
+                	if ( has_post_thumbnail() ):
+						the_post_thumbnail( 'full' );
+					endif;
+					$trim_excerpt = get_the_excerpt();
+					$short_excerpt = wp_trim_words( $trim_excerpt, $num_words = 15, $more = '... ' );
+				?>
+				<a href="<?php the_permalink(); ?>"><h2><?php the_title(); ?></h2></a>
+                <p class="small-font"><a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ), get_the_author_meta( 'user_nicename' ) ) ); ?>"><span class="author"><?php the_author(); ?></span></a></a> <?php echo esc_html( get_the_date() ); ?></p>
+                <p class="post-excerpt"><?php echo esc_html( $short_excerpt ); ?></p>
+            </div><!-- /.big-cat-section -->
+        </div>
+		<?php
+				endwhile;
+			else :
+				get_template_part( 'template-parts/post/content', 'none' );
+			endif;
+		?>
+		</div><!-- /.eight columns -->
+		<?php get_sidebar(); ?>
+    </div><!-- /.row -->
+</div>
 
-			<div class="container">
-				<div class="twelve columns">
-					<div class="more-fancy-h">
-						<h5><div class="more-skew"><a href="#">MORE</a></div></h5>
-					</div><!-- /.more-fancy-h -->
-				</div><!-- /.twelve /.columns -->
-			</div><!-- /.container -->	
-			
-<?php get_footer(); ?>			
+
+
+<?php get_footer(); ?>	

@@ -126,6 +126,7 @@ a, a:hover, a:focus {
   padding: 0.2rem .5rem;
   color: white;
   font-weight: 600;
+  font-size: 1.2rem;
 }
 
 blockquote::before {
@@ -864,6 +865,7 @@ input, textarea, select, fieldset {
 .section-three p,
 .section-four p {
   margin-bottom: .5rem;
+  font-size: 1.2rem;
 }
 .section-two h2,
 .section-three h2,
@@ -976,6 +978,10 @@ input, textarea, select, fieldset {
 }
 .section-five .fullwidth-post-section .post-excerpt {
   margin-bottom: 0rem;
+}
+.section-five .fullwidth-post-section .small-font {
+  font-size: 1.2rem;
+  margin-bottom: .5rem;
 }
 
 .section-title-blue,
