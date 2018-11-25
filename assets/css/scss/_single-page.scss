@@ -13,11 +13,12 @@
 		font-size: 1.8rem;
 		line-height: 2.6rem;
 	}
-}
-.size-full {
-    width: 100%;
-	height: auto;
+
+	img {
+		max-width: 100%;
+		height: auto;
 	}
+}
 
 input[type="text"], 
 input[type="email"], 
@@ -67,6 +68,9 @@ label {
     clear: both;
 }
 .author-info {
+	border-top: 1px solid #1f1f1f;
+	padding-top: 2.4rem;
+	clear: both;
 
 	.author-image {
 		float: left;

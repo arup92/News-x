@@ -155,6 +155,43 @@ blockquote p {
   margin-left: 3rem;
 }
 
+.wp-caption {
+  background: #fff;
+  border: 1px solid #f0f0f0;
+  max-width: 96%;
+  margin-right: 1rem;
+  margin-left: 1rem;
+  padding: 1rem;
+  text-align: center;
+}
+.wp-caption p {
+  font-size: 1.4rem;
+  margin-bottom: 0;
+}
+
+.alignleft {
+  display: inline;
+  float: left;
+  margin-bottom: 1rem;
+  margin-right: 1rem;
+}
+
+.alignnone {
+  margin: 0;
+}
+
+.alignright {
+  display: inline;
+  float: right;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+}
+
+.aligncenter {
+  text-align: center;
+  margin: 0 auto;
+}
+
 /**
  * 
  * #.# Top Bar
@@ -1239,9 +1276,8 @@ input, textarea, select, fieldset {
   font-size: 1.8rem;
   line-height: 2.6rem;
 }
-
-.size-full {
-  width: 100%;
+.single-post-text img {
+  max-width: 100%;
   height: auto;
 }
 
@@ -1294,6 +1330,11 @@ label {
   clear: both;
 }
 
+.author-info {
+  border-top: 1px solid #1f1f1f;
+  padding-top: 2.4rem;
+  clear: both;
+}
 .author-info .author-image {
   float: left;
   padding-right: 1.6rem;

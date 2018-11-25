@@ -170,6 +170,44 @@ blockquote p {
 	}
 }
 
+.wp-caption {
+	background: #fff;
+	border: 1px solid #f0f0f0;
+	max-width: 96%;
+	margin-right: 1rem;
+	margin-left: 1rem;
+	padding: 1rem;
+	text-align: center;
+
+	p {
+		font-size: 1.4rem;
+    	margin-bottom: 0;
+	}
+}
+
+.alignleft {
+	display: inline;
+	float: left;
+	margin-bottom: 1rem;
+	margin-right: 1rem;
+}
+
+.alignnone {
+    margin: 0;
+}
+
+.alignright {
+    display: inline;
+    float: right;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+}
+
+.aligncenter {
+	text-align: center;
+	margin: 0 auto;
+}
+
 /**
  * 
  * #.# Top Bar
