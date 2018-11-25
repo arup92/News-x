@@ -79,3 +79,90 @@
 		padding: .5rem 0;
 	}
 }
+
+/**
+ * --------------------------------------------------------------------------------
+ * Side-Bar Social Media link code
+ * --------------------------------------------------------------------------------
+*/
+.widget-social-links {
+    margin-bottom: 2.4rem;
+}
+.social-box-section {
+    background-color: white;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    position: relative;
+    overflow: hidden;
+    .fa-facebook:before {
+
+	    color: #4267b2;
+	}
+	.fa-google-plus:before {
+	    color: #EA4133;
+	}
+	.fa-twitter:before {
+
+	    color: #4fc5f6;
+	}
+
+	.fa-linkedin:before {
+	    color: #2878B5;
+	}
+
+	.like-button .part {
+		
+		text-align: center;
+	}
+	
+
+    .part {
+    	padding: .5rem;
+    }
+
+    .widget-social-icon,
+    .follow-count,
+    .like-button {
+    	float: left;
+    }
+
+    .widget-social-icon {
+    	width: 10%;
+    	text-align: center;
+    }
+
+    .follow-count {
+    	width: 66%;
+    	color: #fff;
+    	font-weight: 700;
+    }
+
+    .like-button {
+    	width: 24%;
+    }
+
+}
+
+.fb-icon{
+	.follow-count{
+		background-color: #4267b2;
+	}
+}
+
+.gp-icon{
+
+	.follow-count{
+		background-color:#EA4133;
+	}
+}
+
+.twitter-icon{
+	.follow-count{
+		background-color: #4fc5f6;
+	}
+}
+.linkedin-icon{
+	.follow-count{
+		background-color: #2878B5;
+	}
+}

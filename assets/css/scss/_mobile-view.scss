@@ -60,6 +60,10 @@
 }
 
 @media (max-width: 550px) {
+
+    .header {
+        box-shadow: 0px 15px 9px -14px rgba(0, 0, 0, 0.2);
+    }
     
     .exclusive-news {
         width: 30%;

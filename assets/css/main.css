@@ -1175,6 +1175,74 @@ input, textarea, select, fieldset {
   padding: .5rem 0;
 }
 
+/**
+ * --------------------------------------------------------------------------------
+ * Side-Bar Social Media link code
+ * --------------------------------------------------------------------------------
+*/
+.widget-social-links {
+  margin-bottom: 2.4rem;
+}
+
+.social-box-section {
+  background-color: white;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  position: relative;
+  overflow: hidden;
+}
+.social-box-section .fa-facebook:before {
+  color: #4267b2;
+}
+.social-box-section .fa-google-plus:before {
+  color: #EA4133;
+}
+.social-box-section .fa-twitter:before {
+  color: #4fc5f6;
+}
+.social-box-section .fa-linkedin:before {
+  color: #2878B5;
+}
+.social-box-section .like-button .part {
+  text-align: center;
+}
+.social-box-section .part {
+  padding: .5rem;
+}
+.social-box-section .widget-social-icon,
+.social-box-section .follow-count,
+.social-box-section .like-button {
+  float: left;
+}
+.social-box-section .widget-social-icon {
+  width: 10%;
+  text-align: center;
+}
+.social-box-section .follow-count {
+  width: 66%;
+  color: #fff;
+  font-weight: 700;
+}
+.social-box-section .like-button {
+  width: 24%;
+}
+
+.fb-icon .follow-count {
+  background-color: #4267b2;
+}
+
+.gp-icon .follow-count {
+  background-color: #EA4133;
+}
+
+.twitter-icon .follow-count {
+  background-color: #4fc5f6;
+}
+
+.linkedin-icon .follow-count {
+  background-color: #2878B5;
+}
+
 .masonry {
   margin: 2.4rem 0;
   -webkit-column-count: 3;
@@ -1632,6 +1700,10 @@ label {
   }
 }
 @media (max-width: 550px) {
+  .header {
+    box-shadow: 0px 15px 9px -14px rgba(0, 0, 0, 0.2);
+  }
+
   .exclusive-news {
     width: 30%;
   }

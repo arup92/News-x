@@ -3,7 +3,7 @@
 if ( ! function_exists( 'newsx_cs_js' ) ) :
 
 function newsx_cs_js() {
-    wp_enqueue_style( 'font-awesome', 'https://use.fontawesome.com/releases/v5.0.10/css/all.css', array(), '1.0.0', 'all' );
+    wp_enqueue_style( 'font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css', array(), '1.0.0', 'all' );
     wp_enqueue_style( 'normalize', get_template_directory_uri() . '/assets/css/normalize.css', array(), '1.0.0', 'all' );
     wp_enqueue_style( 'slick-carousel', get_template_directory_uri() . '/assets/css/slick.css', array(), '1.0.0', 'all' );
     wp_enqueue_style( 'slick-carousel', get_template_directory_uri() . '/assets/css/slick-theme.css', array(), '1.0.0', 'all' );  
