@@ -12,7 +12,7 @@ if ( have_posts() ) :
 			</div><!-- /.single-post-h -->	
 		</div><!-- /.twelve columns -->
 	</div><!-- /.container -->
-	<div class="container">
+	<div class="container body-container">
 		<div class="row">
 			<div class="eight columns">
 				<div class="shadow">

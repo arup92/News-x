@@ -714,6 +714,11 @@ input, textarea, select, fieldset {
     margin-bottom: 0;
 }
 
+.stuck {
+    position: fixed;
+    top: 5rem;
+    z-index: 9;
+}
 
 
 /**

@@ -20,6 +20,11 @@
     .admin-bar .menubar-right {
         top: 10.4rem;
     }
+
+    .sticky-sidebar {
+        position: relative;
+        top: 0 !important;
+    }
 }
 
 @media (max-width: 768px) {

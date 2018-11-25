@@ -109,4 +109,46 @@
 		}
 	} );
 
+	/* Sticky Sidebar
+	------------------------------------------------------ */
+
+	window.onload = function() {
+	    var selector      = $( '.sticky-sidebar' );
+	    var position      = selector.offset();
+	    var parent_width  = $( '.widget' ).width();
+	    var window_width  = $( window ).width();
+	    var sticky_height = selector.height();
+	    var limit         = $( '.buttom-bar' ).offset().top - sticky_height - 50;
+	    var body_height   = $( '.body-container .eight' ).height();
+	    var sidebar_height   = $( '.body-container .four' ).height();
+
+	    // Sticky sidebar only work on screen size bigger
+	    // than 991px and if post body has reasonal amount
+	    // of contents
+	    if ( ( window_width >= 991 ) && ( body_height > sidebar_height ) && selector.length ) {
+	      $( window ).scroll( function() {
+	          var window_position = $( window ).scrollTop();
+	          if ( window_position >= ( position.top-50 ) ) {
+	            //console.log(window_position + ' ' + position.top);
+	              selector.addClass( 'stuck' ).css( {
+	                'width' : parent_width,
+	                'top'   : '50px',
+	              } );
+	          } else {
+	              selector.removeClass( 'stuck' ).css( {
+	                'width' : parent_width,
+	                'top'   : '0',
+	              } );
+	          } // if window_position
+
+	          if ( limit <  $( window ).scrollTop() ) {
+	            var diff = limit - $( window ).scrollTop();
+	            selector.css( {
+	              top: diff
+	            } );
+	          } // if limit
+	      } ); // scroll function
+	    } // if window_width
+	}
+
 } )( jQuery );

@@ -632,6 +632,12 @@ input, textarea, select, fieldset {
   margin-bottom: 0;
 }
 
+.stuck {
+  position: fixed;
+  top: 5rem;
+  z-index: 9;
+}
+
 /**
  * 
  * #.# Media Queries
@@ -771,7 +777,7 @@ input, textarea, select, fieldset {
   background-color: #ff005b;
   color: white;
   font-weight: 700;
-  width: 10%;
+  width: 11%;
   padding: .5rem 0;
   float: left;
 }
@@ -783,7 +789,7 @@ input, textarea, select, fieldset {
 
 .marquee {
   background-color: #fff;
-  width: 90%;
+  width: 89%;
   padding: .5rem 0;
   float: left;
   overflow: hidden;
@@ -1668,6 +1674,11 @@ label {
 
   .admin-bar .menubar-right {
     top: 10.4rem;
+  }
+
+  .sticky-sidebar {
+    position: relative;
+    top: 0 !important;
   }
 }
 @media (max-width: 768px) {
