@@ -1212,8 +1212,8 @@ input, textarea, select, fieldset {
 .social-box-section .fa-twitter:before {
   color: #4fc5f6;
 }
-.social-box-section .fa-linkedin:before {
-  color: #2878B5;
+.social-box-section .fa-youtube-play:before {
+  color: #e53616;
 }
 .social-box-section .like-button .part {
   text-align: center;
@@ -1251,8 +1251,8 @@ input, textarea, select, fieldset {
   background-color: #4fc5f6;
 }
 
-.linkedin-icon .follow-count {
-  background-color: #2878B5;
+.youtube-icon .follow-count {
+  background-color: #e53616;
 }
 
 .masonry {

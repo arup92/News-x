@@ -364,3 +364,188 @@ function news_x_posts_slider_widget_register() {
 }
 
 add_action( 'widgets_init', 'news_x_posts_slider_widget_register' );
+
+/*************************************************************************************************************************
+ * Adds "News X: Social" widget.
+ ************************************************************************************************************************/
+class News_X_Author_Widget extends WP_Widget {
+
+	/**
+	 * Register widget with WordPress.
+	 */
+	function __construct() {
+		parent::__construct(
+			'ct-author-widget', // Base ID
+			esc_html__( 'News X: Social Widget', 'news-x' ), // Name
+			array( 'description' => esc_html__( 'This widget displays author information to your website.', 'news-x' ), ) // Args
+		);
+	}
+
+	/**
+	 * Back-end widget form.
+	 *
+	 * @see WP_Widget::form()
+	 *
+	 * @param array $instance Previously saved values from database.
+	 */
+	public function form( $instance ) {
+		$title = ( !empty( $instance['title'] ) ) ? $instance['title'] : '';
+		$facebook_link = ( !empty( $instance['facebook'] ) ) ? $instance['facebook'] : '';
+		$twitter_link = ( !empty( $instance['twitter'] ) ) ? $instance['twitter'] : '';
+		$youtube_link = ( !empty( $instance['youtube'] ) ) ? $instance['youtube'] : '';
+		$gplus_link = ( !empty( $instance['gplus'] ) ) ? $instance['gplus'] : '';
+		?>
+		<p>
+		<label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php esc_attr_e( 'Title:', 'news-x' ); ?></label> 
+		<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>">
+		</p>
+		<p>
+		<label for="<?php echo esc_attr( $this->get_field_id( 'facebook' ) ); ?>"><?php esc_attr_e( 'Facebook link:', 'news-x' ); ?></label> 
+		<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'facebook' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'facebook' ) ); ?>" type="text" value="<?php echo esc_attr( $facebook_link ); ?>">
+		</p>
+		<p>
+		<label for="<?php echo esc_attr( $this->get_field_id( 'twitter' ) ); ?>"><?php esc_attr_e( 'Twitter link:', 'news-x' ); ?></label> 
+		<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'twitter' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'twitter' ) ); ?>" type="text" value="<?php echo esc_attr( $twitter_link ); ?>">
+		</p>
+		<p>
+		<label for="<?php echo esc_attr( $this->get_field_id( 'gplus' ) ); ?>"><?php esc_attr_e( 'Google+ link:', 'news-x' ); ?></label> 
+		<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'gplus' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'gplus' ) ); ?>" type="text" value="<?php echo esc_attr( $gplus_link ); ?>">
+		</p>
+		<p>
+		<label for="<?php echo esc_attr( $this->get_field_id( 'youtube' ) ); ?>"><?php esc_attr_e( 'YouTube link:', 'news-x' ); ?></label> 
+		<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'youtube' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'youtube' ) ); ?>" type="text" value="<?php echo esc_attr( $youtube_link ); ?>">
+		</p>
+		<?php
+	}
+
+	/**
+	 * Sanitize widget form values as they are saved.
+	 *
+	 * @see WP_Widget::update()
+	 *
+	 * @param array $new_instance Values just sent to be saved.
+	 * @param array $old_instance Previously saved values from database.
+	 *
+	 * @return array Updated safe values to be saved.
+	 */
+	public function update( $new_instance, $old_instance ) {
+		$instance = array();
+		$instance['title'] = ( ! empty( $new_instance['title'] ) ) ? sanitize_text_field( $new_instance['title'] ) : '';
+		$instance['facebook'] = ( ! empty( $new_instance['facebook'] ) ) ? $new_instance['facebook']  : '';
+		$instance['twitter'] = ( ! empty( $new_instance['twitter'] ) ) ? $new_instance['twitter']  : '';
+		$instance['youtube'] = ( ! empty( $new_instance['youtube'] ) ) ? $new_instance['youtube']  : '';
+		$instance['gplus'] = ( ! empty( $new_instance['gplus'] ) ) ? $new_instance['gplus']  : '';
+
+		return $instance;
+	}
+
+	/**
+	 * Front-end display of widget.
+	 *
+	 * @see WP_Widget::widget()
+	 *
+	 * @param array $args     Widget arguments.
+	 * @param array $instance Saved values from database.
+	 */
+	public function widget( $args, $instance ) {
+		?>
+		<div class="widget-social-links">
+			<?php
+				if ( ! empty( $instance['title'] ) ) {
+					echo '<div class="section-title-blue"><span class="title">' . esc_html( apply_filters( 'writer_blog_author_widget_title', $instance['title'] ) ) . '</span></div>';
+				}
+			?>
+			<div class="social-list follow">
+
+				<?php if ( ! empty( $instance['facebook'] ) ) { ?>
+				<div class="social-box-section fb-icon shadow clearfix">
+						<div class="widget-social-icon">
+							<div class="part">
+								<div class="fa fa-facebook"></div><!-- /.fa -->
+							</div><!-- /.part -->
+						</div><!-- /.widget-social-icon -->
+						<div class="follow-count">
+							<div class="part">
+								<span class="social_info"><?php echo esc_html__( 'Facebook', 'news-x' ); ?></span>
+							</div><!-- /.part -->
+						</div><!-- /.follow-count -->
+						<div class="like-button">
+							<div class="part">
+								<a href="<?php echo esc_url( $instance['facebook'] ); ?>" target="_blank"><?php echo esc_html__( 'Like', 'news-x' ); ?></a>
+							</div><!-- /.part -->
+						</div><!-- /.like-button -->
+				</div><!-- /.social -->
+				<?php } ?>
+
+				<?php if ( ! empty( $instance['twitter'] ) ) { ?>
+				<div class="social-box-section twitter-icon shadow clearfix">
+					<div class="widget-social-icon fb-icon">
+						<div class="part">
+							<div class="fa fa-twitter"></div><!-- /.fa -->
+						</div><!-- /.part -->
+					</div><!-- /.social-icon -->
+					<div class="follow-count">
+						<div class="part">
+							<span class="social_info"><?php echo esc_html__( 'Twitter', 'news-x' ); ?></span>
+						</div><!-- /.part -->
+					</div><!-- /.follow-count -->	
+					<div class="like-button">
+						<div class="part">
+							<a href="<?php echo esc_url( $instance['twitter'] ); ?>" target="_blank"><?php echo esc_html__( 'Follow', 'news-x' ); ?></a>
+						</div><!-- /.part -->
+					</div><!-- /.like-button -->
+				</div><!-- /.social -->
+				<?php } ?>
+
+				<?php if ( ! empty( $instance['gplus'] ) ) { ?>
+				<div class="social-box-section gp-icon shadow clearfix">
+					<div class="widget-social-icon">
+						<div class="part">
+							<div class="fa fa-google-plus"></div><!-- /.fa -->
+						</div><!-- /.part -->
+					</div><!-- /.social-icon -->
+					<div class="follow-count">
+						<div class="part">
+							<span class="social_info"><?php echo esc_html__( 'Google Plus', 'news-x' ); ?></span>
+						</div><!-- /.part -->
+					</div><!-- /.follow-count -->	
+					<div class="like-button">
+						<div class="part">
+							<a href="<?php echo esc_url( $instance['gplus'] ); ?>" target="_blank"><?php echo esc_html__( 'Follow', 'news-x' ); ?></a>
+						</div><!-- /.part -->
+					</div><!-- /.like-button -->
+				</div><!-- /.social -->
+				<?php } ?>
+
+				<?php if ( ! empty( $instance['youtube'] ) ) { ?>
+				<div class="social-box-section youtube-icon shadow clearfix">
+					<div class="widget-social-icon fb-icon">
+						<div class="part">
+							<div class="fa fa-youtube-play"></div><!-- /.fa -->
+						</div><!-- /.part -->
+					</div><!-- /.social-icon -->
+					<div class="follow-count">
+						<div class="part">
+							<span class="social_info"><?php echo esc_html__( 'YouTube', 'news-x' ); ?></span>
+						</div><!-- /.part -->
+					</div><!-- /.follow-count -->	
+					<div class="like-button">
+						<div class="part">
+							<a href="<?php echo esc_url( $instance['youtube'] ); ?>" target="_blank"><?php echo esc_html__( 'Subscribe', 'news-x' ); ?></a>
+						</div><!-- /.part -->
+					</div><!-- /.like-button -->
+				</div><!-- /.social -->
+				<?php } ?>
+			
+			</div><!-- /.social-link --> 
+		</div><!-- /.widget-social-links -->
+		<?php
+	}
+
+} // class News_X_Author_Widget
+
+function news_x_author_widget_register() {
+	register_widget( 'News_X_Author_Widget' );
+}
+
+add_action( 'widgets_init', 'news_x_author_widget_register' );
