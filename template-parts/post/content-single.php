@@ -14,12 +14,11 @@
 		<?php endif; ?>
 		</div><!-- /.single-post-h -->
 		<div class="single-post-text">
+			<?php the_content(); ?>
 			<?php
-				the_content();
-
 				wp_link_pages(
 					array(
-						'before'      => '<div class="link-pages">' . __( 'Continue Reading:', 'news-x' ),
+						'before'      => '<div class="link-pages">' . __( 'Continue Reading:', 'writer-blog' ),
 						'after'       => '</div>',
 						'link_before' => '<span class="page-numbers">',
 						'link_after'  => '</span>',

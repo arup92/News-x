@@ -23,6 +23,16 @@ if ( have_posts() ) :
 					<?php endif; ?>
 					<div class="single-post-text">
 						<?php echo the_content(); ?>
+						<?php
+							wp_link_pages(
+								array(
+									'before'      => '<div class="link-pages">' . __( 'Continue Reading:', 'writer-blog' ),
+									'after'       => '</div>',
+									'link_before' => '<span class="page-numbers">',
+									'link_after'  => '</span>',
+								)
+							);
+						?>
 
 						<div class="author-info">
 							<div class="author-image clearfix">
@@ -48,7 +58,7 @@ if ( have_posts() ) :
 						<?php $prev_post = get_adjacent_post( false, '', false ); ?>
 							<?php if ( is_a( $prev_post, 'WP_Post' ) ) { ?>
 							<div class="nav-prev"></div><!-- /.nav-prev -->
-							<a href="<?php echo esc_url( get_permalink( get_adjacent_post( false, '', false)->ID ) ); ?>" class="btn prev"><?php echo esc_html( get_the_title( get_adjacent_post( false, '', false)->ID ) ); ?></a>
+							<a href="<?php echo esc_url( get_permalink( get_adjacent_post( false, '', false)->ID ) ); ?>" class="btn prev"><?php echo wp_kses_post( get_the_title( get_adjacent_post( false, '', false)->ID ) ); ?></a>
 						<?php } else {
 							echo '&nbsp;';
 						} ?>
@@ -57,12 +67,12 @@ if ( have_posts() ) :
 					<div class="six columns right-nav">
 					<?php $next_post = get_adjacent_post( false, '', true ); ?>
 						<?php if ( is_a( $next_post, 'WP_Post' ) ) { ?>
-						<a href="<?php echo esc_url( get_permalink( get_adjacent_post( false, '', true)->ID ) ); ?>" class="btn next right"><?php echo esc_html( get_the_title( get_adjacent_post( false, '', true)->ID ) ); ?></a>
+						<a href="<?php echo esc_url( get_permalink( get_adjacent_post( false, '', true)->ID ) ); ?>" class="btn next right"><?php echo wp_kses_post( get_the_title( get_adjacent_post( false, '', true)->ID ) ); ?></a>
 						<div class="nav-next"></div><!-- /.nav-prev -->
 					<?php } ?>
 					</div><!-- /.six columns -->
 				</div><!-- /.pagination-nav -->
-				
+
 				<?php if ( comments_open() ) : ?>
 					<div class="shadow">
 						<?php comments_template();?>

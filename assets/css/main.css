@@ -156,6 +156,43 @@ blockquote p {
   margin-left: 3rem;
 }
 
+.wp-caption {
+  background: #fff;
+  border: 1px solid #f0f0f0;
+  max-width: 96%;
+  margin-right: 1rem;
+  margin-left: 1rem;
+  padding: 1rem;
+  text-align: center;
+}
+.wp-caption p {
+  font-size: 1.4rem;
+  margin-bottom: 0;
+}
+
+.alignleft {
+  display: inline;
+  float: left;
+  margin-bottom: 1rem;
+  margin-right: 1rem;
+}
+
+.alignnone {
+  margin: 0;
+}
+
+.alignright {
+  display: inline;
+  float: right;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+}
+
+.aligncenter {
+  text-align: center;
+  margin: 0 auto;
+}
+
 /**
  * 
  * #.# Top Bar
@@ -1034,19 +1071,6 @@ input, textarea, select, fieldset {
   margin-right: 0;
 }
 
-.figure-categories-bg {
-  /*background-color: $green-color;
-  font-size: 1.2rem;
-  line-height: 1;
-  padding: .3rem .5rem;
-  margin-right: .5rem;
-  color: $white-color;
-  border-radius: 0;
-  display: inline-block;
-  font-weight: bold;
-  opacity: 1;*/
-}
-
 .separat-category a {
   background-color: mediumturquoise;
   font-size: 1.2rem;
@@ -1058,6 +1082,31 @@ input, textarea, select, fieldset {
   font-weight: bold;
   opacity: 1;
   margin-right: .2rem;
+}
+
+.page-numbers:not(.prev):not(.next) {
+  text-align: center;
+  display: inline-block;
+  line-height: 2.4rem;
+  width: 2.4rem;
+}
+
+.link-pages {
+  margin-bottom: 1.6rem;
+}
+.link-pages span,
+.link-pages .current {
+  background-color: mediumturquoise;
+  color: white;
+  font-weight: 700;
+  padding: 1rem;
+  border-radius: 3px;
+  box-shadow: 0 1px 1px 0 rgba(0, 1, 1, 0.1);
+  box-sizing: content-box;
+}
+.link-pages > span {
+  background-color: white;
+  color: #404040;
 }
 
 /**
@@ -1313,9 +1362,8 @@ input, textarea, select, fieldset {
   font-size: 1.8rem;
   line-height: 2.6rem;
 }
-
-.size-full {
-  width: 100%;
+.single-post-text img {
+  max-width: 100%;
   height: auto;
 }
 
@@ -1368,6 +1416,11 @@ label {
   clear: both;
 }
 
+.author-info {
+  border-top: 1px solid #1f1f1f;
+  padding-top: 2.4rem;
+  clear: both;
+}
 .author-info .author-image {
   float: left;
   padding-right: 1.6rem;
