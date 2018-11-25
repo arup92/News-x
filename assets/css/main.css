@@ -1131,6 +1131,10 @@ input, textarea, select, fieldset {
   height: auto;
 }
 
+.page-404 .block {
+  margin-top: 2.6rem;
+}
+
 /**
  * --------------------------------------------------------------------------------
  * side-Bar style
@@ -1190,6 +1194,11 @@ input, textarea, select, fieldset {
 .searchform #searchsubmit {
   margin-bottom: 0;
   padding: .5rem 0;
+}
+
+.search img {
+  width: 100%;
+  height: auto;
 }
 
 /**
