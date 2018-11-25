@@ -31,6 +31,16 @@ function ct_widgets_init() {
 	) );
 
 	register_sidebar( array(
+		'name'          => __( 'Sticky Sidebar', 'news-x' ),
+		'id'            => 'news-x-sticky-sidebar',
+		'description'   => __( 'Add widgets here that will stay sticky on page scroll on your front page.', 'writer-blog' ),
+		'before_widget' => '<div id="%1$s" class="%2$s sidebar-widget block shadow">',
+		'after_widget'  => '</div><!-- /.block -->',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+	) );
+
+	register_sidebar( array(
 		'name'          => __( 'Sidebar', 'news-x' ),
 		'id'            => 'news-x-home-sidebar',
 		'description'   => __( 'Add widgets here to appear in your sidebar on front page of your website.', 'news-x' ),
