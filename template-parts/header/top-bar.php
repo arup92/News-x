@@ -5,12 +5,24 @@
 		<div class="row vartical-align">
 			<div class="five columns">
 				<ul class="social-icons">
-					<li><a href="<?php echo esc_html( get_theme_mod( 'news_x_facebook_text_setting', '#' ) ); ?>" class="social-icon facebook"></a></li>
+					<?php if( get_theme_mod( 'news_x_facebook_text_setting', '#' ) ) : ?>
+						<li><a href="<?php echo esc_html( get_theme_mod( 'news_x_facebook_text_setting', '#' ) ); ?>" class="social-icon facebook"></a></li>
+					<?php endif; ?>
+					<?php if( get_theme_mod( 'news_x_twitter_text_setting', '#' ) ) : ?>
 					<li><a href="<?php echo esc_html( get_theme_mod( 'news_x_twitter_text_setting', '#' ) ); ?>" class="social-icon twitter"></a></li>
+					<?php endif; ?>
+					<?php if( get_theme_mod( 'news_x_youtube_text_setting', '#' ) ) : ?>
 					<li><a href="<?php echo esc_html( get_theme_mod( 'news_x_youtube_text_setting', '#' ) ); ?>" class="social-icon youtube"></a></li>
+					<?php endif; ?>
+					<?php if( get_theme_mod( 'news_x_linkedin_text_setting', '#' ) ) : ?>
 					<li><a href="<?php echo esc_html( get_theme_mod( 'news_x_linkedin_text_setting', '#' ) ); ?>" class="social-icon linkedin"></a></li>
+					<?php endif; ?>
+					<?php if( get_theme_mod( 'news_x_instagram_text_setting', '#' ) ) : ?>
 					<li><a href="<?php echo esc_html( get_theme_mod( 'news_x_instagram_text_setting', '#' ) ); ?>" class="social-icon instagram"></a></li>
+					<?php endif; ?>
+					<?php if( get_theme_mod( 'news_x_whatsapp_text_setting', '#' ) ) : ?>
 					<li><a href="<?php echo esc_html( get_theme_mod( 'news_x_whatsapp_text_setting', '#' ) ); ?>" class="social-icon whatsapp"></a></li>
+					<?php endif; ?>
 				</ul>
 			</div><!-- /.five /.columns -->
 			<div class="seven columns">
