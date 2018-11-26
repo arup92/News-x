@@ -25,6 +25,9 @@
         position: relative;
         top: 0 !important;
     }
+    .right-side-ad {
+        display: none;
+    }
 }
 
 @media (max-width: 768px) {
@@ -61,6 +64,10 @@
     }
     .admin-bar .menubar-right {
         top: 12rem;
+    }
+
+    .right-side-ad {
+        display: none;
     }
 }
 
@@ -99,6 +106,16 @@
     		padding: 1.6rem 0 0 1.6rem;
     	}
 	}
+    .exclusive-news {
+        width: 100%;
+    }
+    .marquee {
+        width: 100%;
+    }   
+
+    .right-side-ad {
+        display: none;
+    } 
 }
 
 @media (max-width: 375px) {
@@ -109,4 +126,15 @@
     .marquee {
         width: 65%;
     }
+
+.exclusive-news {
+        width: 100%;
+    }
+    .marquee {
+        width: 100%;
+    } 
+
+    .right-side-ad {
+        display: none;
+    }      
 }
